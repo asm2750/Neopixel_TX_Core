@@ -1,0 +1,35 @@
+// BMM LOC annotation file.
+//
+// Release 14.6 -  P.20131013, build 3.0.10 Apr 3, 2013
+// Copyright (c) 1995-2015 Xilinx, Inc.  All rights reserved.
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Processor 'mojo_mb', ID 100, memory map.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+ADDRESS_MAP mojo_mb MICROBLAZE-LE 100
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'mojo_mb' address space 'lmb_bram' 0x00000000:0x00003FFF (16 KBytes).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE lmb_bram RAMB16 [0x00000000:0x00003FFF]
+        BUS_BLOCK
+            mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1 RAMB16 [31:28] [0:4095] INPUT = mojo_mb.lmb_bram_0.mem PLACED = X1Y10;
+            mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1 RAMB16 [27:24] [0:4095] INPUT = mojo_mb.lmb_bram_1.mem PLACED = X1Y16;
+            mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[2].RAMB16_S4_1 RAMB16 [23:20] [0:4095] INPUT = mojo_mb.lmb_bram_2.mem PLACED = X1Y20;
+            mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[3].RAMB16_S4_1 RAMB16 [19:16] [0:4095] INPUT = mojo_mb.lmb_bram_3.mem PLACED = X1Y24;
+            mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[4].RAMB16_S4_1 RAMB16 [15:12] [0:4095] INPUT = mojo_mb.lmb_bram_4.mem PLACED = X1Y18;
+            mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[5].RAMB16_S4_1 RAMB16 [11:8] [0:4095] INPUT = mojo_mb.lmb_bram_5.mem PLACED = X1Y14;
+            mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[6].RAMB16_S4_1 RAMB16 [7:4] [0:4095] INPUT = mojo_mb.lmb_bram_6.mem PLACED = X1Y22;
+            mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[7].RAMB16_S4_1 RAMB16 [3:0] [0:4095] INPUT = mojo_mb.lmb_bram_7.mem PLACED = X1Y12;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+END_ADDRESS_MAP;
+

@@ -1,0 +1,151 @@
+ISim log file
+Running: C:\Xilinx\neopixel_tx\neopixel_tx_fsm_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Xilinx/neopixel_tx/neopixel_tx_fsm_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# isim force add /neopixel_tx_fsm/clk 1 -radix bin -value 0 -radix bin -time 25 ns -repeat 50 ns
+# isim force add /neopixel_tx_fsm/rst 0 -radix bin
+# isim force add /neopixel_tx_fsm/mode 1 -radix bin
+# isim force add /neopixel_tx_fsm/tx_enable 0 -radix bin
+# isim force add /neopixel_tx_fsm/empty_flg 0 -radix bin
+# isim force add /neopixel_tx_fsm/neo_dIn FF2B15 -radix hex
+# isim force add /neopixel_tx_fsm/rgb_msgTyp 0 -radix bin
+# run 100ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /neopixel_tx_fsm/tx_enable 1 -radix bin
+# isim force add /neopixel_tx_fsm/rst 1 -radix bin
+# run 100ns
+# run 100ns
+# run 50us
+# isim force add /neopixel_tx_fsm/rgb_msgTyp 1 -radix bin
+# run 10us
+# run 10us
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# isim force add /neopixel_tx_fsm/neo_dIn ff2b14 -radix hex
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns
+# run 100ns

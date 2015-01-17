@@ -1,0 +1,123 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml neopixel_tx.twx neopixel_tx.ncd -o neopixel_tx.twr
+neopixel_tx.pcf
+
+Design file:              neopixel_tx.ncd
+Physical constraint file: neopixel_tx.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk_20MHz_i
+---------------+------------+------------+------------+------------+------------------+--------+
+               |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source         | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+---------------+------------+------------+------------+------------+------------------+--------+
+neo_mode_i     |    5.020(R)|      SLOW  |   -1.319(R)|      FAST  |clk_20MHz_i_BUFGP |   0.000|
+neo_rst_i      |    3.948(R)|      SLOW  |   -1.783(R)|      FAST  |clk_20MHz_i_BUFGP |   0.000|
+neo_tx_enable_i|    4.927(R)|      SLOW  |   -1.676(R)|      FAST  |clk_20MHz_i_BUFGP |   0.000|
+---------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock wr_en_i
+-------------+------------+------------+------------+------------+------------------+--------+
+             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source       | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------+------------+------------------+--------+
+neo_msgTyp_i |    2.947(R)|      SLOW  |   -0.904(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<0> |    2.786(R)|      SLOW  |   -0.938(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<1> |    2.814(R)|      SLOW  |   -0.959(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<2> |    2.477(R)|      SLOW  |   -0.718(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<3> |    2.569(R)|      SLOW  |   -0.790(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<4> |    2.975(R)|      SLOW  |   -1.004(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<5> |    3.273(R)|      SLOW  |   -1.343(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<6> |    2.863(R)|      SLOW  |   -1.015(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<7> |    3.074(R)|      SLOW  |   -1.167(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<8> |    3.067(R)|      SLOW  |   -1.099(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<9> |    2.948(R)|      SLOW  |   -1.052(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<10>|    3.154(R)|      SLOW  |   -1.130(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<11>|    3.076(R)|      SLOW  |   -1.112(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<12>|    3.182(R)|      SLOW  |   -1.231(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<13>|    3.325(R)|      SLOW  |   -1.341(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<14>|    2.961(R)|      SLOW  |   -1.092(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<15>|    2.871(R)|      SLOW  |   -1.078(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<16>|    3.553(R)|      SLOW  |   -1.421(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<17>|    3.301(R)|      SLOW  |   -1.318(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<18>|    3.475(R)|      SLOW  |   -1.423(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<19>|    3.230(R)|      SLOW  |   -1.334(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<20>|    3.254(R)|      SLOW  |   -1.284(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<21>|    2.986(R)|      SLOW  |   -1.166(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<22>|    3.574(R)|      SLOW  |   -1.453(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rgb_i<23>|    3.436(R)|      SLOW  |   -1.412(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+neo_rst_i    |    6.754(R)|      SLOW  |   -2.051(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+-------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk_20MHz_i to Pad
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+neopixel_tx_o|         9.622(R)|      SLOW  |         4.148(R)|      FAST  |clk_20MHz_i_BUFGP |   0.000|
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock wr_en_i to Pad
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+                |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination     |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+fifo_empty_flg_o|        15.881(R)|      SLOW  |         6.214(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+fifo_full_flg_o |        17.029(R)|      SLOW  |         5.594(R)|      FAST  |wr_en_i_BUFGP     |   0.000|
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk_20MHz_i
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_20MHz_i    |    5.492|         |         |         |
+wr_en_i        |   10.391|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr_en_i
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+wr_en_i        |    6.360|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Thu Jan 15 19:43:25 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 210 MB
+
+
+

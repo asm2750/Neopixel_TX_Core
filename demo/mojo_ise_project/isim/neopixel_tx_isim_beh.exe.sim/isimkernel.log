@@ -1,0 +1,31 @@
+Command line:
+   neopixel_tx_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1203
+
+Sat Jan 10 20:31:23 2015
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 521.982 Meg
+
+ Total Signals          : 100
+ Total Nets             : 152
+ Total Signal Drivers   : 61
+ Total Blocks           : 14
+ Total Primitive Blocks : 11
+ Total Processes        : 158
+ Total Traceable Variables  : 210
+ Total Scalar Nets and Variables : 5483
+Total Line Count : 976
+Total Line Count : 976
+Total Line Count : 976
+
+ Total Simulation Time: 3.17188 sec
+
+ Current Memory Usage: 365.744 Meg
+
+Sat Jan 10 21:19:30 2015
+

@@ -1,0 +1,792 @@
+00:36:12 **** Build of project neopixel_test_bsp ****
+make -k all 
+libgen -hw ../neopixel_hw_platform/system.xml\
+	       \
+	       -pe mojo_mb \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../neopixel_hw_platform/system.xml -pe mojo_mb -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mxl-soft-mul -mno-xl-reorder -mcpu=v8.40.a  -O2
+-c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mxl-soft-mul -mno-xl-reorder -mcpu=v8.40.a  -O2
+-c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling iomodule"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+00:36:42 **** Build of configuration Debug for project neopixel_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: neopixel_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neopixel_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2270	    268	   2084	   4622	   120e	neopixel_test.elf
+'Finished building: neopixel_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+'Finished building: neopixel_test.elf.elfcheck'
+' '
+00:37:44 **** Build of configuration Debug for project perip_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: perip_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "perip_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: perip_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size perip_test.elf  |tee "perip_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2270	    268	   2084	   4622	   120e	perip_test.elf
+'Finished building: perip_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck perip_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "perip_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+perip_test.elf 
+
+ELF file	: perip_test.elf
+elfcheck passed.
+'Finished building: perip_test.elf.elfcheck'
+' '
+00:38:19 **** Build of configuration Debug for project peripr_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+'Finished building: ../src/testperiph.c'
+' '
+'Building file: ../src/xiomodule_selftest_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xiomodule_selftest_example.d" -MT"src/xiomodule_selftest_example.d" -o "src/xiomodule_selftest_example.o" "../src/xiomodule_selftest_example.c"
+'Finished building: ../src/xiomodule_selftest_example.c'
+' '
+'Building target: peripr_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "peripr_test.elf"  ./src/testperiph.o ./src/xiomodule_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: peripr_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size peripr_test.elf  |tee "peripr_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6338	    344	   2270	   8952	   22f8	peripr_test.elf
+'Finished building: peripr_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck peripr_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "peripr_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+peripr_test.elf 
+
+ELF file	: peripr_test.elf
+elfcheck passed.
+'Finished building: peripr_test.elf.elfcheck'
+' '
+17:35:53 **** Clean-only build of configuration Debug for project neopixel_test ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  neopixel_test.elf.size  neopixel_test.elf.elfcheck  neopixel_test.elf
+' '
+17:35:59 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:82:5: error: redefinition of 'main'
+../src/helloworld.c:55:5: note: previous definition of 'main' was here
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:24: error: 'gpo' undeclared (first use in this function)
+../src/helloworld.c:90:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:90:64: error: 'timerTick' undeclared (first use in this function)
+../src/helloworld.c:100:9: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
+make: *** [src/helloworld.o] Error 1
+18:00:01 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:109:5: error: redefinition of 'main'
+../src/helloworld.c:62:5: note: previous definition of 'main' was here
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:117:24: error: 'gpo' undeclared (first use in this function)
+../src/helloworld.c:117:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:117:64: error: 'timerTick' undeclared (first use in this function)
+../src/helloworld.c:127:9: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
+make: *** [src/helloworld.o] Error 1
+18:00:10 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: neopixel_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neopixel_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3926	    344	   2264	   6534	   1986	neopixel_test.elf
+'Finished building: neopixel_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+'Finished building: neopixel_test.elf.elfcheck'
+' '
+18:04:44 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: neopixel_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neopixel_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3958	    344	   2264	   6566	   19a6	neopixel_test.elf
+'Finished building: neopixel_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+'Finished building: neopixel_test.elf.elfcheck'
+' '
+19:02:24 **** Incremental Build of configuration Debug for project neopixel_test ****
+make all 
+make: Nothing to be done for `all'.
+19:02:28 **** Clean-only build of configuration Debug for project peripr_test ****
+make clean 
+rm -rf  ./src/testperiph.o ./src/xiomodule_selftest_example.o  ./src/testperiph.d ./src/xiomodule_selftest_example.d  peripr_test.elf.size  peripr_test.elf.elfcheck  peripr_test.elf
+' '
+19:02:30 **** Incremental Build of configuration Debug for project peripr_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+'Finished building: ../src/testperiph.c'
+' '
+'Building file: ../src/xiomodule_selftest_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xiomodule_selftest_example.d" -MT"src/xiomodule_selftest_example.d" -o "src/xiomodule_selftest_example.o" "../src/xiomodule_selftest_example.c"
+'Finished building: ../src/xiomodule_selftest_example.c'
+' '
+'Building target: peripr_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "peripr_test.elf"  ./src/testperiph.o ./src/xiomodule_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: peripr_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size peripr_test.elf  |tee "peripr_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6338	    344	   2270	   8952	   22f8	peripr_test.elf
+'Finished building: peripr_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck peripr_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "peripr_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+peripr_test.elf 
+
+ELF file	: peripr_test.elf
+elfcheck passed.
+'Finished building: peripr_test.elf.elfcheck'
+' '
+19:37:42 **** Auto Build of project neopixel_test_bsp ****
+make -k all 
+'Finished building libraries'
+19:38:12 **** Incremental Build of configuration Debug for project neopixel_test ****
+make all 
+make: Nothing to be done for `all'.
+19:42:35 **** Incremental Build of configuration Debug for project neopixel_test ****
+make all 
+make: Nothing to be done for `all'.
+20:24:11 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3970	    344	   2270	   6584	   19b8	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+20:27:19 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3970	    344	   2270	   6584	   19b8	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+20:27:34 **** Incremental Build of configuration Debug for project neopixel_test ****
+make all 
+make: Nothing to be done for `all'.
+20:35:37 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3978	    344	   2270	   6592	   19c0	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+20:36:12 **** Incremental Build of configuration Debug for project neopixel_test ****
+make all 
+make: Nothing to be done for `all'.
+20:43:31 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3978	    344	   2270	   6592	   19c0	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+20:44:41 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3978	    344	   2270	   6592	   19c0	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+20:47:17 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3978	    344	   2270	   6592	   19c0	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+20:50:56 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3974	    344	   2264	   6582	   19b6	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+20:54:52 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3974	    344	   2264	   6582	   19b6	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+20:55:00 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3970	    344	   2270	   6584	   19b8	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+20:58:22 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3974	    344	   2264	   6582	   19b6	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+21:01:58 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3974	    344	   2264	   6582	   19b6	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+21:03:41 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3970	    344	   2270	   6584	   19b8	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+21:03:52 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3970	    344	   2270	   6584	   19b8	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+21:21:34 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3974	    344	   2264	   6582	   19b6	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+19:23:03 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3970	    344	   2270	   6584	   19b8	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 
+19:25:09 **** Auto Build of configuration Debug for project neopixel_test ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: neopixel_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "neopixel_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: neopixel_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size neopixel_test.elf  |tee "neopixel_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3970	    344	   2270	   6584	   19b8	neopixel_test.elf
+Finished building: neopixel_test.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck neopixel_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "neopixel_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+neopixel_test.elf 
+
+ELF file	: neopixel_test.elf
+elfcheck passed.
+Finished building: neopixel_test.elf.elfcheck
+ 

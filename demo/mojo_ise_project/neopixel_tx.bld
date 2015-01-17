@@ -1,0 +1,80 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mojo_constr.ucf -p
+xc6slx9-tqg144-2 neopixel_tx.ngc neopixel_tx.ngd -bm ipcore_dir/mojo_mb.bmm
+
+Reading NGO file "C:/Xilinx/neopixel_tx/neopixel_tx.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "mojo_constr.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Processing BMM file "ipcore_dir/mojo_mb.bmm" ...
+ERROR:NgdBuild:989 - Failed to process BMM information ipcore_dir/mojo_mb.bmm
+
+Checking expanded design ...
+
+INTERNAL_ERROR::45 - Memory allocation leak of 112 bytes at 0x06C70C38 for a 'AddressMappingType' record.
+    Total memory in use at allocation was 13413 bytes.
+    Source file "BmmUtils.c", line number 3054.
+
+
+INTERNAL_ERROR::45 - Memory allocation leak of 51 bytes at 0x06C33C40 for a StrNew.
+    Total memory in use at allocation was 13525 bytes.
+    Source file "BmmUtils.c", line number 3059.
+
+
+INTERNAL_ERROR::45 - Memory allocation leak of 88 bytes at 0x06D51D68 for a 'AddressMapType' record.
+    Total memory in use at allocation was 13576 bytes.
+    Source file "BmmUtils.c", line number 2572.
+
+
+INTERNAL_ERROR::45 - Memory allocation leak of 40 bytes at 0x06C339D8 for a 'symbol_context' record.
+    Total memory in use at allocation was 13664 bytes.
+    Source file "SymbolUtils.c", line number 516.
+
+
+INTERNAL_ERROR::45 - Memory allocation leak of 31 bytes at 0x06D22160 for a StrDup.
+    Total memory in use at allocation was 13704 bytes.
+    Source file "BmmUtils.c", line number 2585.
+
+
+INTERNAL_ERROR::45 - Memory allocation leak of 16 bytes at 0x06C62CE0 for a 'DataFileNameListType' record.
+    Total memory in use at allocation was 13735 bytes.
+    Source file "data2bramCore.c", line number 3561.
+
+
+INTERNAL_ERROR::45 - Memory allocation leak of 24 bytes at 0x06C61A48 for a 'AddressSpaceLinkType' record.
+    Total memory in use at allocation was 13751 bytes.
+    Source file "BmmUtils.c", line number 2291.
+
+
+INTERNAL_ERROR::45 - Memory allocation leak of 96 bytes at 0x06D51E30 for 'void *' data.
+    Total memory in use at allocation was 13775 bytes.
+    Source file "D2BUtil_Data2Bram.c", line number 727.
+
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     1
+  Number of warnings:   0
+
+Total memory usage is 158004 kilobytes
+
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "neopixel_tx.bld"...

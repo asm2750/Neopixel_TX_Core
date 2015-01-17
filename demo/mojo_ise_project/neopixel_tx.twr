@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml neopixel_tx.twx neopixel_tx.ncd -o neopixel_tx.twr
+neopixel_tx.pcf -ucf mojo_constr.ucf
+
+Design file:              neopixel_tx.ncd
+Physical constraint file: neopixel_tx.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+sys_rst     |    2.235(R)|      SLOW  |   -0.634(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+ctrlLed<0>  |        11.742(R)|      SLOW  |         5.462(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+ctrlLed<1>  |        11.888(R)|      SLOW  |         5.527(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+ctrlLed<2>  |        11.712(R)|      SLOW  |         5.470(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+ctrlLed<3>  |        11.874(R)|      SLOW  |         5.579(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+ctrlLed<4>  |        11.785(R)|      SLOW  |         5.532(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+neo_tx_out  |         9.992(R)|      SLOW  |         4.775(R)|      FAST  |neoClk            |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.531|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Jan 12 19:13:33 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 222 MB
+
+
+

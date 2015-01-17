@@ -1,0 +1,3 @@
+verilog work "neopixel_hdl/neopixel_tx_fsm.v"
+verilog work "neopixel_hdl/FIFO_WxD.v"
+verilog work "neopixel_hdl/neopixel_tx.v"

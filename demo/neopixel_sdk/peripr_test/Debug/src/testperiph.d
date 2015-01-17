@@ -1,0 +1,48 @@
+src/testperiph.d: ../src/testperiph.c \
+ ../../neopixel_test_bsp/mojo_mb/include/xparameters.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xil_cache.h \
+ ../../neopixel_test_bsp/mojo_mb/include/mb_interface.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xbasic_types.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xil_types.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xparameters.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xiomodule.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xstatus.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xiomodule_l.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xiomodule_io.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xil_io.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xil_printf.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xio.h ../src/iomodule_header.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xbasic_types.h \
+ ../../neopixel_test_bsp/mojo_mb/include/xstatus.h
+
+../../neopixel_test_bsp/mojo_mb/include/xparameters.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xil_cache.h:
+
+../../neopixel_test_bsp/mojo_mb/include/mb_interface.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xbasic_types.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xil_types.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xparameters.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xiomodule.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xstatus.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xiomodule_l.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xiomodule_io.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xil_io.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xil_printf.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xio.h:
+
+../src/iomodule_header.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xbasic_types.h:
+
+../../neopixel_test_bsp/mojo_mb/include/xstatus.h:

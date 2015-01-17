@@ -1,0 +1,98 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml neopixel_tx_fsm.twx neopixel_tx_fsm.ncd -o
+neopixel_tx_fsm.twr neopixel_tx_fsm.pcf
+
+Design file:              neopixel_tx_fsm.ncd
+Physical constraint file: neopixel_tx_fsm.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk_20MHz
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+empty_flg   |    1.233(R)|      SLOW  |   -0.229(R)|      SLOW  |clk_20MHz_BUFGP   |   0.000|
+mode        |    5.152(R)|      SLOW  |   -1.782(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<0>  |    4.349(R)|      SLOW  |   -2.278(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<1>  |    4.552(R)|      SLOW  |   -2.417(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<2>  |    4.025(R)|      SLOW  |   -2.023(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<3>  |    4.027(R)|      SLOW  |   -1.973(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<4>  |    4.495(R)|      SLOW  |   -2.376(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<5>  |    4.106(R)|      SLOW  |   -2.038(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<6>  |    4.171(R)|      SLOW  |   -2.153(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<7>  |    3.976(R)|      SLOW  |   -2.038(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<8>  |    4.503(R)|      SLOW  |   -2.422(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<9>  |    4.564(R)|      SLOW  |   -2.475(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<10> |    4.494(R)|      SLOW  |   -2.377(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<11> |    4.535(R)|      SLOW  |   -2.416(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<12> |    5.460(R)|      SLOW  |   -3.079(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<13> |    5.257(R)|      SLOW  |   -2.931(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<14> |    5.125(R)|      SLOW  |   -2.834(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<15> |    5.370(R)|      SLOW  |   -2.967(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<16> |    4.902(R)|      SLOW  |   -2.384(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<17> |    4.342(R)|      SLOW  |   -1.998(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<18> |    5.263(R)|      SLOW  |   -2.651(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<19> |    4.811(R)|      SLOW  |   -2.355(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<20> |    4.769(R)|      SLOW  |   -2.242(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<21> |    4.490(R)|      SLOW  |   -2.121(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<22> |    5.234(R)|      SLOW  |   -2.670(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_dIn<23> |    5.004(R)|      SLOW  |   -2.545(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_msgTyp  |    1.716(R)|      SLOW  |   -0.784(R)|      SLOW  |clk_20MHz_BUFGP   |   0.000|
+rst         |    3.292(R)|      SLOW  |   -1.180(R)|      SLOW  |clk_20MHz_BUFGP   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk_20MHz to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+rd_next     |         7.712(R)|      SLOW  |         4.099(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+rgb_sOut    |         9.386(R)|      SLOW  |         5.177(R)|      FAST  |clk_20MHz_BUFGP   |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk_20MHz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_20MHz      |    3.628|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Sun Jan 04 18:25:42 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 208 MB
+
+
+

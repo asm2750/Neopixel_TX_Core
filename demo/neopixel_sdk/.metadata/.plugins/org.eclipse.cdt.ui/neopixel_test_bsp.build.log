@@ -1,0 +1,6 @@
+19:37:42 **** Auto Build of project neopixel_test_bsp ****
+make -k all 
+'Finished building libraries'
+
+19:37:42 Build Finished (took 422ms)
+

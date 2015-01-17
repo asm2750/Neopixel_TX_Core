@@ -1,0 +1,39 @@
+19:02:30 **** Incremental Build of configuration Debug for project peripr_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+'Finished building: ../src/testperiph.c'
+' '
+'Building file: ../src/xiomodule_selftest_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../neopixel_test_bsp/mojo_mb/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xiomodule_selftest_example.d" -MT"src/xiomodule_selftest_example.d" -o "src/xiomodule_selftest_example.o" "../src/xiomodule_selftest_example.c"
+'Finished building: ../src/xiomodule_selftest_example.c'
+' '
+'Building target: peripr_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../neopixel_test_bsp/mojo_mb/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "peripr_test.elf"  ./src/testperiph.o ./src/xiomodule_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: peripr_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size peripr_test.elf  |tee "peripr_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6338	    344	   2270	   8952	   22f8	peripr_test.elf
+'Finished building: peripr_test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck peripr_test.elf -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb  |tee "peripr_test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../neopixel_hw_platform/system.xml -pe mojo_mb
+peripr_test.elf 
+
+ELF file	: peripr_test.elf
+elfcheck passed.
+'Finished building: peripr_test.elf.elfcheck'
+' '
+
+19:02:39 Build Finished (took 9s.15ms)
+

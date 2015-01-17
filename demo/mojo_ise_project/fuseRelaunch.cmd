@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Xilinx/neopixel_tx/neopixel_tx_fsm_isim_beh.exe" -prj "C:/Xilinx/neopixel_tx/neopixel_tx_fsm_beh.prj" "work.neopixel_tx_fsm" "work.glbl" 

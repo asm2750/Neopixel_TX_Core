@@ -1,0 +1,16 @@
+Release 14.7 - par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Jan 15 19:43:17 2015
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 4 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   neo_rgbFIFO/Mram_fifo1_RAMD_D1_O
+   neo_rgbFIFO/Mram_fifo2_RAMD_D1_O
+   neo_rgbFIFO/Mram_fifo3_RAMD_D1_O
+   neo_rgbFIFO/Mram_fifo4_RAMD_D1_O
+
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Xilinx\neopixel_tx\neopixel_tx.ncd
+OUTFILE=C:\Xilinx\neopixel_tx\neopixel_tx.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=C:\Xilinx\neopixel_tx
+LICENSE=WebPack
+USER_INFO=178244258_0_0_275

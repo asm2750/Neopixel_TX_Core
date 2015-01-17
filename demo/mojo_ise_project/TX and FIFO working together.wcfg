@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Xilinx/neopixel_tx/neopixel_tx_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="neopixel_tx" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/neopixel_tx/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/mode" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mode</obj_property>
+      <obj_property name="ObjectShortName">mode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/tx_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_enable</obj_property>
+      <obj_property name="ObjectShortName">tx_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/dIn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dIn[24:0]</obj_property>
+      <obj_property name="ObjectShortName">dIn[24:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/wr_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/full_flg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">full_flg</obj_property>
+      <obj_property name="ObjectShortName">full_flg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/empty_flg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">empty_flg</obj_property>
+      <obj_property name="ObjectShortName">empty_flg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/neo_dOut" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">neo_dOut</obj_property>
+      <obj_property name="ObjectShortName">neo_dOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/neoClk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">neoClk</obj_property>
+      <obj_property name="ObjectShortName">neoClk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/neo_msgTyp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">neo_msgTyp</obj_property>
+      <obj_property name="ObjectShortName">neo_msgTyp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/neo_rgb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">neo_rgb[23:0]</obj_property>
+      <obj_property name="ObjectShortName">neo_rgb[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neopixel_tx/neo_rdEn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">neo_rdEn</obj_property>
+      <obj_property name="ObjectShortName">neo_rdEn</obj_property>
+   </wvobject>
+</wave_config>

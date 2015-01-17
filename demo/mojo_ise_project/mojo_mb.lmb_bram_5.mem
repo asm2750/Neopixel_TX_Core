@@ -1,0 +1,40 @@
+// Mem file initialization records.
+//
+// Release 14.6 - Data2MEM P.20131013, build 3.0.10 Apr 3, 2013
+// Copyright (c) 1995-2015 Xilinx, Inc.  All rights reserved.
+//
+// Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\data2mem.EXE -p "xc6slx9tqg144-2" -bm C:/Xilinx/neopixel_tx/ipcore_dir/mojo_mb.bmm -bd ../neopixel_sdk/neopixel_test/Debug/neopixel_test.elf tag mojo_mb -bx . -u
+//
+// Created on Monday January 12, 2015 - 07:27:04 pm, from:
+//
+//     Map file     - C:\Xilinx\neopixel_tx\ipcore_dir\mojo_mb.bmm
+//     Data file(s) - ..\neopixel_sdk\neopixel_test\Debug\neopixel_test.elf
+//
+// Address space 'mojo_mb.lmb_bram', bit lane [11:8].
+//
+// Bus width = 32 bits, number of bus blocks = 1.
+
+@00000000
+    0 0 0 2 0 8 0 0 0 2
+
+@00000014
+    0 1 0 F 0 9 0 1 0 0 1 0 0 0 1 F 0 0 0 0 F 0 F 0 1 8 0 0 0 F 8 0 0 8 0 0 F 0 0 1 0 0 0 1 8 F 0 0 0 0 0 1 8 0 0 0 1 0 0 0 0 0 0 F
+    0 0 0 1 0 1 8 0 0 1 0 0 0 0 0 0 1 8 0 0 0 0 F 0 0 1 0 1 8 0 0 0 8 F 0 1 0 1 8 0 0 0 8 F 0 0 0 0 D 0 0 0 0 4 0 0 0 D 0 0 0 0 0 0
+    0 0 0 8 0 0 0 0 0 F 0 0 0 0 0 0 0 F 0 0 8 0 F D 0 F 0 0 F 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 F 0 0 1 0 0 F 0 0 8 8 8 8 F
+    0 0 0 F 0 8 0 0 0 F 1 0 8 0 0 F F 8 0 0 1 8 0 8 8 0 8 0 0 F 0 0 F F F 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 F 0 0 F 0 8 0 0 8 F 0
+    0 0 0 0 F 0 8 0 0 0 0 1 0 8 0 0 F F 8 0 0 1 0 0 8 8 0 8 8 0 0 E 0 0 E F F 0 0 0 0 F 0 8 F 0 0 F 0 0 0 0 0 0 0 0 D 0 0 D F E 0 0
+    0 0 F 0 8 F 0 F 0 8 0 F 0 8 8 8 F 0 0 0 0 0 0 0 F A 0 F A 0 0 D 0 E 0 0 0 F 0 0 F F 0 F 0 0 0 F 8 0 F F F F 0 0 0 0 F 0 0 0 0 0
+    0 0 0 0 0 0 F 0 0 0 0 0 F 0 0 0 0 0 0 0 0 1 0 0 5 0 0 1 0 2 0 0 1 0 0 0 3 0 0 1 0 0 0 2 0 0 F F 0 0 0 0 0 1 0 0 0 2 0 0 F E 0 0
+    0 0 0 0 0 1 0 0 0 2 0 0 F E 0 0 0 0 0 0 0 1 0 0 0 2 0 0 1 0 F 0 2 0 0 F E 0 0 0 0 0 0 0 1 0 0 0 1 0 0 F E 0 0 0 0 1 0 0 0 1 0 0
+    F D 0 0 0 0 0 1 0 0 0 1 0 0 F D 0 0 0 0 0 0 0 0 F 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0 F 0 0 0 0 1 1 1 0 0 F 0 4 1 0 0 1 0 0 0 0 2 2 0 0 0 0 0 0 F 0 4 1 0 0 1 F 0 F 0 0 0 0 1 1 1 0 F 0 8 0 0 0 8 0 8 0 8 0 8 0 0 0
+    0 F 0 3 3 0 0 0 1 0 0 0 F 0 3 3 0 0 0 1 0 0 0 F 0 3 3 0 0 1 F 0 F 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 F 0 2 3 0 0 1 F 0 0 0 0 0 0 0
+    0 0 8 8 0 8 0 8 0 F 0 0 0 0 0 8 0 8 0 8 0 8 0 F 0 1 1 0 0 0 0 0 F 0 0 0 0 0 0 1 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 F 0 1 0 0 0 1 F
+    0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 F 0 0 0 0 0 0 0 0 0 0 0 0 0 0 F D 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 F F 0 0 1 1 0 0
+    0 1 0 0 F 0 0 1 1 0 0 0 0 D F 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 F 0 0 0 0 0 0 1 0 0 0 0 1 F 0 0 8 0 0 1 0 0 0 0 0 0 0 0 1 F
+    0 0 8 0 0 1 0 0 0 0 0 F 0 0 0 0 1 1 1 0 0 F F F 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 F F F 0 0 0 1 F 0 F 8 F 8 0 8 F 2 0 F 6 0 8
+    0 0 F 8 F 1 0 8 0 0 F 0 F 0 9 4 E 9 4 F 4 0 9 4 F 4 0 F 0
+
+@000003F2
+    F 0 0 0 0 0 0 0 0 F 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 E 0 0
+    0 0 0 0 7 0 0 5 0 0 0 1 0 0 0 0 0 0

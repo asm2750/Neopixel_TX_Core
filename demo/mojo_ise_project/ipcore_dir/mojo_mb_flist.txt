@@ -1,0 +1,17 @@
+# Output products list for <mojo_mb>
+mb_bootloop_le.elf
+microblaze_mcs_setup.tcl
+mojo_mb.asy
+mojo_mb.bmm
+mojo_mb.gise
+mojo_mb.ngc
+mojo_mb.v
+mojo_mb.veo
+mojo_mb.xco
+mojo_mb.xise
+mojo_mb\mb_bootloop_le.elf
+mojo_mb\microblaze_mcs_setup.tcl
+mojo_mb\system_template.tcl
+mojo_mb_flist.txt
+mojo_mb_readme.txt
+mojo_mb_sdk.xml

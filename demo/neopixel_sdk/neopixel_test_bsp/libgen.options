@@ -1,0 +1,3 @@
+PROCESSOR=mojo_mb
+REPOSITORIES=
+HWSPEC=../neopixel_hw_platform/system.xml

@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Jan 12 19:13:07 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+NET
+        "mojo_mb/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.pc_write_I"
+        USELOWSKEWLINES;
+COMP "clk" LOCATE = SITE "P56" LEVEL 1;
+COMP "sys_rst" LOCATE = SITE "P38" LEVEL 1;
+COMP "ctrlLed<0>" LOCATE = SITE "P134" LEVEL 1;
+COMP "ctrlLed<1>" LOCATE = SITE "P133" LEVEL 1;
+COMP "ctrlLed<2>" LOCATE = SITE "P132" LEVEL 1;
+COMP "ctrlLed<3>" LOCATE = SITE "P131" LEVEL 1;
+COMP "ctrlLed<4>" LOCATE = SITE "P127" LEVEL 1;
+COMP "neo_tx_out" LOCATE = SITE "P51" LEVEL 1;
+SCHEMATIC END;
+

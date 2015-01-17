@@ -1,0 +1,447 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: neopixel_tx_fsm.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "neopixel_tx_fsm.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "neopixel_tx_fsm"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : neopixel_tx_fsm
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Xilinx\neopixel_tx\neopixel_tx_fsm.v" into library work
+Parsing module <neopixel_tx_fsm>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <neopixel_tx_fsm>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <neopixel_tx_fsm>.
+    Related source file is "C:\Xilinx\neopixel_tx\neopixel_tx_fsm.v".
+        idle = 2'b00
+        chk_fifo = 2'b01
+        neo_sendRst = 2'b10
+        neo_sendRGB = 2'b11
+        rst_pulse = 1000
+    Found 2-bit register for signal <neostate>.
+    Found 1-bit register for signal <rd_next>.
+    Found 1-bit register for signal <tx_compSig>.
+    Found 1-bit register for signal <rgb_sOut>.
+    Found 5-bit register for signal <dataCntr>.
+    Found 10-bit register for signal <pulseCntr>.
+    Found finite state machine <FSM_0> for signal <neostate>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk_20MHz (rising_edge)                        |
+    | Reset              | rst (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit adder for signal <dataCntr[4]_GND_1_o_add_14_OUT> created at line 122.
+    Found 10-bit adder for signal <pulseCntr[9]_GND_1_o_add_29_OUT> created at line 164.
+    Found 1-bit 24-to-1 multiplexer for signal <dataCntr[4]_X_1_o_Mux_15_o> created at line 124.
+    Found 1-bit 3-to-1 multiplexer for signal <PWR_1_o_GND_1_o_MUX_67_o> created at line 117.
+    Found 1-bit 3-to-1 multiplexer for signal <GND_1_o_tx_compSig_MUX_66_o> created at line 117.
+    Found 10-bit 3-to-1 multiplexer for signal <GND_1_o_pulseCntr[9]_mux_32_OUT> created at line 162.
+    Found 5-bit comparator greater for signal <dataCntr[4]_PWR_1_o_LessThan_13_o> created at line 118
+    Found 10-bit comparator greater for signal <n0017> created at line 120
+    Found 10-bit comparator greater for signal <onePulse[9]_pulseCntr[9]_LessThan_17_o> created at line 124
+    Found 10-bit comparator greater for signal <zeroPulse[9]_pulseCntr[9]_LessThan_19_o> created at line 125
+    Found 10-bit comparator lessequal for signal <n0042> created at line 163
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  13 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <neopixel_tx_fsm> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 5
+ 1-bit register                                        : 3
+ 10-bit register                                       : 1
+ 5-bit register                                        : 1
+# Comparators                                          : 5
+ 10-bit comparator greater                             : 3
+ 10-bit comparator lessequal                           : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 13
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 24-to-1 multiplexer                             : 1
+ 1-bit 3-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 1
+ 10-bit 3-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+# Comparators                                          : 5
+ 10-bit comparator greater                             : 3
+ 10-bit comparator lessequal                           : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 13
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 24-to-1 multiplexer                             : 1
+ 1-bit 3-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 1
+ 10-bit 3-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <neostate[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+
+Optimizing unit <neopixel_tx_fsm> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block neopixel_tx_fsm, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : neopixel_tx_fsm.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 67
+#      INV                         : 1
+#      LUT2                        : 5
+#      LUT3                        : 4
+#      LUT4                        : 5
+#      LUT5                        : 9
+#      LUT6                        : 38
+#      MUXF7                       : 5
+# FlipFlops/Latches                : 20
+#      FD                          : 17
+#      FDC                         : 2
+#      FDE                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 30
+#      IBUF                        : 28
+#      OBUF                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              20  out of  11440     0%  
+ Number of Slice LUTs:                   62  out of   5720     1%  
+    Number used as Logic:                62  out of   5720     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     62
+   Number with an unused Flip Flop:      42  out of     62    67%  
+   Number with an unused LUT:             0  out of     62     0%  
+   Number of fully used LUT-FF pairs:    20  out of     62    32%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          31
+ Number of bonded IOBs:                  31  out of    102    30%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_20MHz                          | BUFGP                  | 20    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.022ns (Maximum Frequency: 248.651MHz)
+   Minimum input arrival time before clock: 4.548ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_20MHz'
+  Clock period: 4.022ns (frequency: 248.651MHz)
+  Total number of paths / destination ports: 508 / 20
+-------------------------------------------------------------------------
+Delay:               4.022ns (Levels of Logic = 3)
+  Source:            pulseCntr_8 (FF)
+  Destination:       pulseCntr_0 (FF)
+  Source Clock:      clk_20MHz rising
+  Destination Clock: clk_20MHz rising
+
+  Data Path: pulseCntr_8 to pulseCntr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.447   0.943  pulseCntr_8 (pulseCntr_8)
+     LUT4:I1->O           10   0.205   1.085  Mmux_GND_1_o_pulseCntr[9]_mux_32_OUT1121 (Mmux_GND_1_o_pulseCntr[9]_mux_32_OUT112)
+     LUT5:I2->O            9   0.205   0.830  Mmux_GND_1_o_pulseCntr[9]_mux_32_OUT113 (Mmux_GND_1_o_pulseCntr[9]_mux_32_OUT11)
+     LUT3:I2->O            1   0.205   0.000  Mmux_GND_1_o_pulseCntr[9]_mux_32_OUT12 (GND_1_o_pulseCntr[9]_mux_32_OUT<0>)
+     FD:D                      0.102          pulseCntr_0
+    ----------------------------------------
+    Total                      4.022ns (1.164ns logic, 2.858ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_20MHz'
+  Total number of paths / destination ports: 67 / 20
+-------------------------------------------------------------------------
+Offset:              4.548ns (Levels of Logic = 5)
+  Source:            rgb_dIn<20> (PAD)
+  Destination:       rgb_sOut (FF)
+  Destination Clock: clk_20MHz rising
+
+  Data Path: rgb_dIn<20> to rgb_sOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.944  rgb_dIn_20_IBUF (rgb_dIn_20_IBUF)
+     LUT6:I0->O            1   0.203   0.000  Mmux_dataCntr[4]_X_1_o_Mux_15_o_7 (Mmux_dataCntr[4]_X_1_o_Mux_15_o_7)
+     MUXF7:I1->O           2   0.140   0.845  Mmux_dataCntr[4]_X_1_o_Mux_15_o_6_f7 (Mmux_dataCntr[4]_X_1_o_Mux_15_o_6_f7)
+     LUT6:I3->O            1   0.205   0.684  Mmux_PWR_1_o_GND_1_o_MUX_67_o15_SW2 (N23)
+     LUT6:I4->O            1   0.203   0.000  Mmux_PWR_1_o_GND_1_o_MUX_67_o16 (PWR_1_o_GND_1_o_MUX_67_o)
+     FD:D                      0.102          rgb_sOut
+    ----------------------------------------
+    Total                      4.548ns (2.075ns logic, 2.473ns route)
+                                       (45.6% logic, 54.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_20MHz'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            rd_next (FF)
+  Destination:       rd_next (PAD)
+  Source Clock:      clk_20MHz rising
+
+  Data Path: rd_next to rd_next
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.616  rd_next (rd_next_OBUF)
+     OBUF:I->O                 2.571          rd_next_OBUF (rd_next)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_20MHz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_20MHz      |    4.022|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.30 secs
+ 
+--> 
+
+Total memory usage is 236848 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

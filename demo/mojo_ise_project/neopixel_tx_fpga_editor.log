@@ -1,0 +1,86 @@
+#:C29    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   C:\Xilinx\neopixel_tx
+#Date/Time:
+#:T   Sun Jan 11 19:32:49 2015
+#------------------------------
+	#Reading neopixel_tx.ncd...
+	#Loading device for application Rf_Device from file '6slx9.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "neopixel_tx" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
+	#Design creation date: 2015.01.12.03.31.17
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1'
+	#3
+unselect comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1'
+	#4
+select -k comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1'
+	#5
+unselect comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1'
+	#6
+select -k comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[2].RAMB16_S4_1'
+	#7
+unselect comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[2].RAMB16_S4_1'
+	#8
+select -k comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1'
+	#9
+unselect comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1'
+	#10
+select -k comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[2].RAMB16_S4_1'
+	#11
+unselect comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[2].RAMB16_S4_1'
+	#12
+select -k comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1'
+	#13
+unselect -all
+	#14
+select comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1'
+	#comp "mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1",  site "RAMB16_X1Y10",  type = RAMB16BWER  (RPM grid X65Y80)
+	#15
+post attr
+	#16
+unpost comp "mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1"
+	#17
+unselect comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1'
+	#18
+select -k comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1'
+	#19
+unselect -all
+	#20
+select comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1'
+	#comp "mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1",  site "RAMB16_X1Y8",  type = RAMB16BWER  (RPM grid X65Y64)
+	#21
+unselect -all
+	#22
+select comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1'
+	#comp "mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1",  site "RAMB16_X1Y8",  type = RAMB16BWER  (RPM grid X65Y64)
+	#23
+post block
+	#24
+unselect -all
+	#25
+select comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1'
+	#comp "mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1",  site "RAMB16_X1Y8",  type = RAMB16BWER  (RPM grid X65Y64)
+	#26
+unselect -all
+	#27
+unselect -all
+	#28
+select comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1'
+	#comp "mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1",  site "RAMB16_X1Y8",  type = RAMB16BWER  (RPM grid X65Y64)
+	#29
+post attr
+	#30
+unpost comp "mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1"
+	#31
+unselect comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[1].RAMB16_S4_1'
+	#32
+select -k comp 'mojo_mb/U0/lmb_bram_I/RAM_Inst/Using_B16_S4.The_BRAMs[0].RAMB16_S4_1'
+	#33
+post attr

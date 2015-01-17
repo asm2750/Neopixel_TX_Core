@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/FIFO_WxD.xst" -ofn "C:/Xilinx/neopixel_tx/FIFO_WxD.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/FIFO_WxD.xst" -ofn "C:/Xilinx/neopixel_tx/FIFO_WxD.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/FIFO_WxD.xst" -ofn "C:/Xilinx/neopixel_tx/FIFO_WxD.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/FIFO_WxD.xst" -ofn "C:/Xilinx/neopixel_tx/FIFO_WxD.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/FIFO_WxD.xst" -ofn "C:/Xilinx/neopixel_tx/FIFO_WxD.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/FIFO_WxD.xst" -ofn "C:/Xilinx/neopixel_tx/FIFO_WxD.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/FIFO_WxD.xst" -ofn "C:/Xilinx/neopixel_tx/FIFO_WxD.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/FIFO_WxD.xst" -ofn "C:/Xilinx/neopixel_tx/FIFO_WxD.syr" 
+xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/FIFO_WxD.xst" -ofn "C:/Xilinx/neopixel_tx/FIFO_WxD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 FIFO_WxD.ngc FIFO_WxD.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FIFO_WxD_map.ncd FIFO_WxD.ngd FIFO_WxD.pcf 
+par -w -intstyle ise -ol high -mt off FIFO_WxD_map.ncd FIFO_WxD.ncd FIFO_WxD.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FIFO_WxD.twx FIFO_WxD.ncd -o FIFO_WxD.twr FIFO_WxD.pcf 

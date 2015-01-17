@@ -1,0 +1,745 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.33 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.33 secs
+ 
+--> Reading design: neopixel_tx.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "neopixel_tx.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "neopixel_tx"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : neopixel_tx
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Xilinx\neopixel_tx\neopixel_tx_fsm.v" into library work
+Parsing module <neopixel_tx_fsm>.
+Analyzing Verilog file "C:\Xilinx\neopixel_tx\FIFO_WxD.v" into library work
+Parsing module <FIFO_WxD>.
+Analyzing Verilog file "C:\Xilinx\neopixel_tx\neopixel_tx.v" into library work
+Parsing module <neopixel_tx>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <neopixel_tx>.
+
+Elaborating module <FIFO_WxD(U_FIFO_WIDTH=24,U_FIFO_SQ_DEPTH=10)>.
+
+Elaborating module <FIFO_WxD(U_FIFO_WIDTH=1,U_FIFO_SQ_DEPTH=10)>.
+
+Elaborating module <neopixel_tx_fsm>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <neopixel_tx>.
+    Related source file is "C:\Xilinx\neopixel_tx\neopixel_tx.v".
+    Summary:
+	no macro.
+Unit <neopixel_tx> synthesized.
+
+Synthesizing Unit <FIFO_WxD_1>.
+    Related source file is "C:\Xilinx\neopixel_tx\FIFO_WxD.v".
+        U_FIFO_WIDTH = 24
+        U_FIFO_SQ_DEPTH = 10
+    Found 8x24-bit dual-port RAM <Mram_fifo> for signal <fifo>.
+    Found 10-bit register for signal <rd_ptr>.
+    Found 10-bit register for signal <wr_ptr>.
+    Found 10-bit adder for signal <rd_ptr[9]_GND_2_o_add_4_OUT> created at line 62.
+    Found 11-bit adder for signal <_n0034> created at line 68.
+    Found 10-bit comparator equal for signal <empty_flg> created at line 67
+    Found 11-bit comparator equal for signal <full_flg> created at line 30
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <FIFO_WxD_1> synthesized.
+
+Synthesizing Unit <FIFO_WxD_2>.
+    Related source file is "C:\Xilinx\neopixel_tx\FIFO_WxD.v".
+        U_FIFO_WIDTH = 1
+        U_FIFO_SQ_DEPTH = 10
+    Found 8x1-bit dual-port RAM <Mram_fifo> for signal <fifo>.
+    Found 10-bit register for signal <rd_ptr>.
+    Found 10-bit register for signal <wr_ptr>.
+    Found 10-bit adder for signal <rd_ptr[9]_GND_3_o_add_4_OUT> created at line 62.
+    Found 11-bit adder for signal <_n0033> created at line 68.
+    Found 10-bit comparator equal for signal <empty_flg> created at line 67
+    Found 11-bit comparator equal for signal <full_flg> created at line 30
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <FIFO_WxD_2> synthesized.
+
+Synthesizing Unit <neopixel_tx_fsm>.
+    Related source file is "C:\Xilinx\neopixel_tx\neopixel_tx_fsm.v".
+        idle = 2'b00
+        chk_fifo = 2'b01
+        neo_sendRst = 2'b10
+        neo_sendRGB = 2'b11
+        rst_pulse = 10'b1111111100
+        one800 = 10'b0000001100
+        zero800 = 10'b0000000101
+        pulse800 = 10'b0000010111
+        one400 = 10'b0000001100
+        zero400 = 10'b0000011010
+        pulse400 = 10'b0000110000
+    Found 2-bit register for signal <neostate>.
+    Found 1-bit register for signal <tx_compSig>.
+    Found 1-bit register for signal <neo_dOut>.
+    Found 5-bit register for signal <dataCntr>.
+    Found 10-bit register for signal <pulseCntr>.
+    Found finite state machine <FSM_0> for signal <neostate>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit subtractor for signal <dataCntr[4]_GND_4_o_sub_14_OUT> created at line 150.
+    Found 10-bit adder for signal <pulseCntr[9]_GND_4_o_add_35_OUT> created at line 198.
+    Found 1-bit 24-to-1 multiplexer for signal <GND_4_o_X_4_o_Mux_15_o> created at line 152.
+    Found 1-bit 3-to-1 multiplexer for signal <neostate[1]_GND_4_o_MUX_101_o> created at line 145.
+    Found 1-bit 3-to-1 multiplexer for signal <GND_4_o_tx_compSig_MUX_100_o> created at line 145.
+    Found 10-bit 3-to-1 multiplexer for signal <GND_4_o_pulseCntr[9]_mux_38_OUT> created at line 195.
+    Found 10-bit comparator lessequal for signal <n0011> created at line 135
+    Found 10-bit comparator equal for signal <pulseCntr[9]_fullPulse[9]_equal_13_o> created at line 149
+    Found 10-bit comparator greater for signal <onePulse[9]_pulseCntr[9]_LessThan_17_o> created at line 152
+    Found 10-bit comparator greater for signal <pulseCntr[9]_fullPulse[9]_LessThan_18_o> created at line 152
+    Found 10-bit comparator greater for signal <zeroPulse[9]_pulseCntr[9]_LessThan_21_o> created at line 153
+    Found 10-bit comparator lessequal for signal <n0049> created at line 190
+    Found 10-bit comparator lessequal for signal <n0052> created at line 197
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred  12 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <neopixel_tx_fsm> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 8x1-bit dual-port RAM                                 : 1
+ 8x24-bit dual-port RAM                                : 1
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 3
+ 11-bit adder                                          : 2
+ 5-bit subtractor                                      : 1
+# Registers                                            : 8
+ 1-bit register                                        : 2
+ 10-bit register                                       : 5
+ 5-bit register                                        : 1
+# Comparators                                          : 11
+ 10-bit comparator equal                               : 3
+ 10-bit comparator greater                             : 3
+ 10-bit comparator lessequal                           : 3
+ 11-bit comparator equal                               : 2
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 7
+ 1-bit 24-to-1 multiplexer                             : 1
+ 1-bit 3-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 2
+ 10-bit 3-to-1 multiplexer                             : 1
+ 24-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <FIFO_WxD_1>.
+The following registers are absorbed into counter <rd_ptr>: 1 register on signal <rd_ptr>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_fifo> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 24-bit                     |          |
+    |     clkA           | connected to signal <wr_en>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <wr_ptr<2:0>>   |          |
+    |     diA            | connected to signal <dataIn>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 24-bit                     |          |
+    |     addrB          | connected to signal <rd_ptr<2:0>>   |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <FIFO_WxD_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <FIFO_WxD_2>.
+The following registers are absorbed into counter <rd_ptr>: 1 register on signal <rd_ptr>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_fifo> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     clkA           | connected to signal <wr_en>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <wr_ptr<2:0>>   |          |
+    |     diA            | connected to signal <dataIn>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     addrB          | connected to signal <rd_ptr<2:0>>   |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <FIFO_WxD_2> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 8x1-bit dual-port distributed RAM                     : 1
+ 8x24-bit dual-port distributed RAM                    : 1
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 2
+ 5-bit subtractor                                      : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+# Comparators                                          : 11
+ 10-bit comparator equal                               : 3
+ 10-bit comparator greater                             : 3
+ 10-bit comparator lessequal                           : 3
+ 11-bit comparator equal                               : 2
+# Multiplexers                                         : 15
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 24-to-1 multiplexer                             : 1
+ 1-bit 3-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 2
+ 10-bit 3-to-1 multiplexer                             : 1
+ 24-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <neo_tx/FSM_0> on signal <neostate[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+
+Optimizing unit <neopixel_tx> ...
+
+Optimizing unit <FIFO_WxD_1> ...
+
+Optimizing unit <neopixel_tx_fsm> ...
+
+Optimizing unit <FIFO_WxD_2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block neopixel_tx, actual ratio is 3.
+FlipFlop neo_rgbFIFO/wr_ptr_0 has been replicated 1 time(s)
+FlipFlop neo_rgbFIFO/wr_ptr_1 has been replicated 1 time(s)
+FlipFlop neo_rgbFIFO/wr_ptr_8 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 62
+ Flip-Flops                                            : 62
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : neopixel_tx.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 268
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 18
+#      LUT2                        : 28
+#      LUT3                        : 15
+#      LUT4                        : 22
+#      LUT5                        : 27
+#      LUT6                        : 110
+#      MUXCY                       : 18
+#      MUXF7                       : 5
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 62
+#      FD                          : 12
+#      FDC                         : 25
+#      FDCE                        : 20
+#      FDE                         : 5
+# RAMS                             : 5
+#      RAM16X1D                    : 1
+#      RAM32M                      : 4
+# Clock Buffers                    : 3
+#      BUFG                        : 1
+#      BUFGP                       : 2
+# IO Buffers                       : 31
+#      IBUF                        : 28
+#      OBUF                        : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              62  out of  11440     0%  
+ Number of Slice LUTs:                  241  out of   5720     4%  
+    Number used as Logic:               223  out of   5720     3%  
+    Number used as Memory:               18  out of   1440     1%  
+       Number used as RAM:               18
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    244
+   Number with an unused Flip Flop:     182  out of    244    74%  
+   Number with an unused LUT:             3  out of    244     1%  
+   Number of fully used LUT-FF pairs:    59  out of    244    24%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of    102    32%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+neo_tx/tx_compSig                  | BUFG                   | 20    |
+wr_en_i                            | BUFGP                  | 28    |
+clk_20MHz_i                        | BUFGP                  | 19    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 7.113ns (Maximum Frequency: 140.588MHz)
+   Minimum input arrival time before clock: 5.963ns
+   Maximum output required time after clock: 10.897ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'neo_tx/tx_compSig'
+  Clock period: 5.543ns (frequency: 180.408MHz)
+  Total number of paths / destination ports: 310 / 40
+-------------------------------------------------------------------------
+Delay:               5.543ns (Levels of Logic = 3)
+  Source:            neo_rgbFIFO/rd_ptr_2 (FF)
+  Destination:       neo_rgbFIFO/rd_ptr_9 (FF)
+  Source Clock:      neo_tx/tx_compSig rising
+  Destination Clock: neo_tx/tx_compSig rising
+
+  Data Path: neo_rgbFIFO/rd_ptr_2 to neo_rgbFIFO/rd_ptr_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            16   0.525   1.410  neo_rgbFIFO/rd_ptr_2 (neo_rgbFIFO/rd_ptr_2)
+     LUT4:I1->O            2   0.235   0.834  neo_rgbFIFO/full_flg1111 (neo_rgbFIFO/full_flg111)
+     LUT6:I4->O            2   0.250   0.726  neo_rgbFIFO/empty_flg103_SW0 (N136)
+     LUT6:I5->O           10   0.254   1.007  neo_rgbFIFO/empty_flg_inv1 (neo_rgbFIFO/empty_flg_inv)
+     FDCE:CE                   0.302          neo_rgbFIFO/rd_ptr_0
+    ----------------------------------------
+    Total                      5.543ns (1.566ns logic, 3.977ns route)
+                                       (28.3% logic, 71.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'wr_en_i'
+  Clock period: 7.113ns (frequency: 140.588MHz)
+  Total number of paths / destination ports: 2688 / 43
+-------------------------------------------------------------------------
+Delay:               7.113ns (Levels of Logic = 4)
+  Source:            neo_rgbFIFO/wr_ptr_2 (FF)
+  Destination:       neo_rgbFIFO/Mram_fifo4 (RAM)
+  Source Clock:      wr_en_i rising
+  Destination Clock: wr_en_i rising
+
+  Data Path: neo_rgbFIFO/wr_ptr_2 to neo_rgbFIFO/Mram_fifo4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             17   0.525   1.437  neo_rgbFIFO/wr_ptr_2 (neo_rgbFIFO/wr_ptr_2)
+     LUT6:I3->O           12   0.235   1.069  neo_rgbFIFO/Madd__n0034_xor<6>111 (neo_rgbFIFO/Madd__n0034_xor<6>11)
+     LUT3:I2->O           14   0.254   1.127  neo_rgbFIFO/full_flg811 (neo_rgbFIFO/full_flg81)
+     LUT5:I4->O            1   0.254   0.790  neo_rgbFIFO/full_flg114_SW0_SW2 (N56)
+     LUT6:I4->O            4   0.250   0.803  neo_rgbFIFO/Mmux_BUS_000111 (neo_rgbFIFO/BUS_0001)
+     RAM32M:WE                 0.369          neo_rgbFIFO/Mram_fifo2
+    ----------------------------------------
+    Total                      7.113ns (1.887ns logic, 5.226ns route)
+                                       (26.5% logic, 73.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_20MHz_i'
+  Clock period: 5.572ns (frequency: 179.469MHz)
+  Total number of paths / destination ports: 590 / 24
+-------------------------------------------------------------------------
+Delay:               5.572ns (Levels of Logic = 4)
+  Source:            neo_tx/pulseCntr_2 (FF)
+  Destination:       neo_tx/neo_dOut (FF)
+  Source Clock:      clk_20MHz_i rising
+  Destination Clock: clk_20MHz_i rising
+
+  Data Path: neo_tx/pulseCntr_2 to neo_tx/neo_dOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              12   0.525   1.345  neo_tx/pulseCntr_2 (neo_tx/pulseCntr_2)
+     LUT4:I0->O            1   0.254   0.910  neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o13 (neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o12)
+     LUT6:I3->O            2   0.235   0.834  neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o14 (neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o13)
+     LUT6:I4->O            1   0.250   0.910  neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o18_SW0 (N121)
+     LUT6:I3->O            1   0.235   0.000  neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o18 (neo_tx/neostate[1]_GND_4_o_MUX_101_o)
+     FD:D                      0.074          neo_tx/neo_dOut
+    ----------------------------------------
+    Total                      5.572ns (1.573ns logic, 3.999ns route)
+                                       (28.2% logic, 71.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'neo_tx/tx_compSig'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              4.543ns (Levels of Logic = 2)
+  Source:            neo_rst_i (PAD)
+  Destination:       neo_rgbFIFO/rd_ptr_9 (FF)
+  Destination Clock: neo_tx/tx_compSig rising
+
+  Data Path: neo_rst_i to neo_rgbFIFO/rd_ptr_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.328   0.765  neo_rst_i_IBUF (neo_rst_i_IBUF)
+     INV:I->O             45   0.255   1.736  neo_rgbFIFO/rst_inv1_INV_0 (neo_cmdFIFO/rst_inv)
+     FDCE:CLR                  0.459          neo_cmdFIFO/rd_ptr_0
+    ----------------------------------------
+    Total                      4.543ns (2.042ns logic, 2.501ns route)
+                                       (44.9% logic, 55.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'wr_en_i'
+  Total number of paths / destination ports: 53 / 53
+-------------------------------------------------------------------------
+Offset:              4.543ns (Levels of Logic = 2)
+  Source:            neo_rst_i (PAD)
+  Destination:       neo_rgbFIFO/wr_ptr_9 (FF)
+  Destination Clock: wr_en_i rising
+
+  Data Path: neo_rst_i to neo_rgbFIFO/wr_ptr_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.328   0.765  neo_rst_i_IBUF (neo_rst_i_IBUF)
+     INV:I->O             45   0.255   1.736  neo_rgbFIFO/rst_inv1_INV_0 (neo_cmdFIFO/rst_inv)
+     FDC:CLR                   0.459          neo_rgbFIFO/wr_ptr_9
+    ----------------------------------------
+    Total                      4.543ns (2.042ns logic, 2.501ns route)
+                                       (44.9% logic, 55.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_20MHz_i'
+  Total number of paths / destination ports: 40 / 20
+-------------------------------------------------------------------------
+Offset:              5.963ns (Levels of Logic = 5)
+  Source:            neo_mode_i (PAD)
+  Destination:       neo_tx/pulseCntr_9 (FF)
+  Destination Clock: clk_20MHz_i rising
+
+  Data Path: neo_mode_i to neo_tx/pulseCntr_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.328   1.117  neo_mode_i_IBUF (neo_mode_i_IBUF)
+     LUT4:I0->O            2   0.254   0.726  neo_tx/pulseCntr[9]_fullPulse[9]_equal_13_o10121 (neo_tx/pulseCntr[9]_fullPulse[9]_equal_13_o1012)
+     LUT5:I4->O            2   0.254   0.726  neo_tx/Mmux_GND_4_o_pulseCntr[9]_mux_38_OUT11_SW0 (N22)
+     LUT4:I3->O            9   0.254   0.976  neo_tx/Mmux_GND_4_o_pulseCntr[9]_mux_38_OUT11 (neo_tx/Mmux_GND_4_o_pulseCntr[9]_mux_38_OUT11)
+     LUT6:I5->O            1   0.254   0.000  neo_tx/Mmux_GND_4_o_pulseCntr[9]_mux_38_OUT21 (neo_tx/GND_4_o_pulseCntr[9]_mux_38_OUT<1>)
+     FD:D                      0.074          neo_tx/pulseCntr_1
+    ----------------------------------------
+    Total                      5.963ns (2.418ns logic, 3.545ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'neo_tx/tx_compSig'
+  Total number of paths / destination ports: 80 / 2
+-------------------------------------------------------------------------
+Offset:              10.897ns (Levels of Logic = 6)
+  Source:            neo_rgbFIFO/rd_ptr_2 (FF)
+  Destination:       fifo_full_flg_o (PAD)
+  Source Clock:      neo_tx/tx_compSig rising
+
+  Data Path: neo_rgbFIFO/rd_ptr_2 to fifo_full_flg_o
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            16   0.525   1.410  neo_rgbFIFO/rd_ptr_2 (neo_rgbFIFO/rd_ptr_2)
+     LUT3:I0->O            1   0.235   1.137  neo_rgbFIFO/full_flg11243_SW0_SW0 (N44)
+     LUT6:I0->O            2   0.254   1.156  neo_rgbFIFO/full_flg11243 (neo_rgbFIFO/full_flg11243)
+     LUT5:I0->O           11   0.254   1.147  neo_rgbFIFO/full_flg1124 (neo_rgbFIFO/full_flg1124)
+     LUT6:I4->O            1   0.250   0.682  neo_rgbFIFO/full_flg114 (rgb_full_flg)
+     LUT2:I1->O            1   0.254   0.681  fifo_full_flg_o1 (fifo_full_flg_o_OBUF)
+     OBUF:I->O                 2.912          fifo_full_flg_o_OBUF (fifo_full_flg_o)
+    ----------------------------------------
+    Total                     10.897ns (4.684ns logic, 6.213ns route)
+                                       (43.0% logic, 57.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'wr_en_i'
+  Total number of paths / destination ports: 128 / 2
+-------------------------------------------------------------------------
+Offset:              10.250ns (Levels of Logic = 5)
+  Source:            neo_cmdFIFO/wr_ptr_8 (FF)
+  Destination:       fifo_full_flg_o (PAD)
+  Source Clock:      wr_en_i rising
+
+  Data Path: neo_cmdFIFO/wr_ptr_8 to fifo_full_flg_o
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             28   0.525   1.453  neo_cmdFIFO/wr_ptr_8 (neo_cmdFIFO/wr_ptr_8)
+     LUT6:I5->O            3   0.254   1.042  neo_cmdFIFO/full_flg112_SW1 (N52)
+     LUT5:I1->O           24   0.254   1.835  neo_cmdFIFO/full_flg112 (neo_cmdFIFO/full_flg112)
+     LUT6:I0->O            1   0.254   0.790  neo_cmdFIFO/full_flg114 (cmd_full_flg)
+     LUT2:I0->O            1   0.250   0.681  fifo_full_flg_o1 (fifo_full_flg_o_OBUF)
+     OBUF:I->O                 2.912          fifo_full_flg_o_OBUF (fifo_full_flg_o)
+    ----------------------------------------
+    Total                     10.250ns (4.449ns logic, 5.801ns route)
+                                       (43.4% logic, 56.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_20MHz_i'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            neo_tx/neo_dOut (FF)
+  Destination:       neopixel_tx_o (PAD)
+  Source Clock:      clk_20MHz_i rising
+
+  Data Path: neo_tx/neo_dOut to neopixel_tx_o
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  neo_tx/neo_dOut (neo_tx/neo_dOut)
+     OBUF:I->O                 2.912          neopixel_tx_o_OBUF (neopixel_tx_o)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_20MHz_i
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+clk_20MHz_i      |    5.572|         |         |         |
+neo_tx/tx_compSig|   10.709|         |         |         |
+wr_en_i          |   10.756|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock neo_tx/tx_compSig
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+neo_tx/tx_compSig|    5.543|         |         |         |
+wr_en_i          |    5.590|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr_en_i
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+neo_tx/tx_compSig|    7.712|         |         |         |
+wr_en_i          |    7.113|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.53 secs
+ 
+--> 
+
+Total memory usage is 239088 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+
