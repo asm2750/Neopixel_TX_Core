@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.28 secs
+Total CPU time to Xst completion: 0.42 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total CPU time to Xst completion: 0.42 secs
  
 --> Reading design: neopixel_tx.prj
 
@@ -105,11 +105,11 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\fpga_projects\neopixel_tx\neopixel_hdl\neopixel_tx_fsm.v" into library work
+Analyzing Verilog file "C:\fpga_projects\neo_tx\ise_project\neopixel_hdl\neopixel_tx_fsm.v" into library work
 Parsing module <neopixel_tx_fsm>.
-Analyzing Verilog file "C:\fpga_projects\neopixel_tx\neopixel_hdl\FIFO_WxD.v" into library work
+Analyzing Verilog file "C:\fpga_projects\neo_tx\ise_project\neopixel_hdl\FIFO_WxD.v" into library work
 Parsing module <FIFO_WxD>.
-Analyzing Verilog file "C:\fpga_projects\neopixel_tx\neopixel_hdl\neopixel_tx.v" into library work
+Analyzing Verilog file "C:\fpga_projects\neo_tx\ise_project\neopixel_hdl\neopixel_tx.v" into library work
 Parsing module <neopixel_tx>.
 
 =========================================================================
@@ -129,22 +129,22 @@ Elaborating module <neopixel_tx_fsm>.
 =========================================================================
 
 Synthesizing Unit <neopixel_tx>.
-    Related source file is "C:\fpga_projects\neopixel_tx\neopixel_hdl\neopixel_tx.v".
+    Related source file is "C:\fpga_projects\neo_tx\ise_project\neopixel_hdl\neopixel_tx.v".
     Summary:
 	no macro.
 Unit <neopixel_tx> synthesized.
 
 Synthesizing Unit <FIFO_WxD_1>.
-    Related source file is "C:\fpga_projects\neopixel_tx\neopixel_hdl\FIFO_WxD.v".
+    Related source file is "C:\fpga_projects\neo_tx\ise_project\neopixel_hdl\FIFO_WxD.v".
         U_FIFO_WIDTH = 24
         U_FIFO_SQ_DEPTH = 10
     Found 8x24-bit dual-port RAM <Mram_fifo> for signal <fifo>.
     Found 10-bit register for signal <rd_ptr>.
     Found 10-bit register for signal <wr_ptr>.
-    Found 10-bit adder for signal <rd_ptr[9]_GND_2_o_add_4_OUT> created at line 76.
-    Found 11-bit adder for signal <_n0034> created at line 82.
-    Found 10-bit comparator equal for signal <empty_flg> created at line 81
-    Found 11-bit comparator equal for signal <full_flg> created at line 44
+    Found 10-bit adder for signal <rd_ptr[9]_GND_2_o_add_4_OUT> created at line 75.
+    Found 11-bit adder for signal <_n0034> created at line 81.
+    Found 10-bit comparator equal for signal <empty_flg> created at line 80
+    Found 11-bit comparator equal for signal <full_flg> created at line 43
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -154,16 +154,16 @@ Synthesizing Unit <FIFO_WxD_1>.
 Unit <FIFO_WxD_1> synthesized.
 
 Synthesizing Unit <FIFO_WxD_2>.
-    Related source file is "C:\fpga_projects\neopixel_tx\neopixel_hdl\FIFO_WxD.v".
+    Related source file is "C:\fpga_projects\neo_tx\ise_project\neopixel_hdl\FIFO_WxD.v".
         U_FIFO_WIDTH = 1
         U_FIFO_SQ_DEPTH = 10
     Found 8x1-bit dual-port RAM <Mram_fifo> for signal <fifo>.
     Found 10-bit register for signal <rd_ptr>.
     Found 10-bit register for signal <wr_ptr>.
-    Found 10-bit adder for signal <rd_ptr[9]_GND_3_o_add_4_OUT> created at line 76.
-    Found 11-bit adder for signal <_n0033> created at line 82.
-    Found 10-bit comparator equal for signal <empty_flg> created at line 81
-    Found 11-bit comparator equal for signal <full_flg> created at line 44
+    Found 10-bit adder for signal <rd_ptr[9]_GND_3_o_add_4_OUT> created at line 75.
+    Found 11-bit adder for signal <_n0033> created at line 81.
+    Found 10-bit comparator equal for signal <empty_flg> created at line 80
+    Found 11-bit comparator equal for signal <full_flg> created at line 43
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -173,7 +173,7 @@ Synthesizing Unit <FIFO_WxD_2>.
 Unit <FIFO_WxD_2> synthesized.
 
 Synthesizing Unit <neopixel_tx_fsm>.
-    Related source file is "C:\fpga_projects\neopixel_tx\neopixel_hdl\neopixel_tx_fsm.v".
+    Related source file is "C:\fpga_projects\neo_tx\ise_project\neopixel_hdl\neopixel_tx_fsm.v".
         idle = 2'b00
         chk_fifo = 2'b01
         neo_sendRst = 2'b10
@@ -203,19 +203,19 @@ Synthesizing Unit <neopixel_tx_fsm>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 5-bit subtractor for signal <dataCntr[4]_GND_4_o_sub_14_OUT> created at line 150.
-    Found 10-bit adder for signal <pulseCntr[9]_GND_4_o_add_35_OUT> created at line 198.
-    Found 1-bit 24-to-1 multiplexer for signal <GND_4_o_X_4_o_Mux_15_o> created at line 152.
-    Found 1-bit 3-to-1 multiplexer for signal <neostate[1]_GND_4_o_MUX_101_o> created at line 145.
-    Found 1-bit 3-to-1 multiplexer for signal <GND_4_o_tx_compSig_MUX_100_o> created at line 145.
-    Found 10-bit 3-to-1 multiplexer for signal <GND_4_o_pulseCntr[9]_mux_38_OUT> created at line 195.
-    Found 10-bit comparator lessequal for signal <n0011> created at line 135
-    Found 10-bit comparator equal for signal <pulseCntr[9]_fullPulse[9]_equal_13_o> created at line 149
-    Found 10-bit comparator greater for signal <onePulse[9]_pulseCntr[9]_LessThan_17_o> created at line 152
-    Found 10-bit comparator greater for signal <pulseCntr[9]_fullPulse[9]_LessThan_18_o> created at line 152
-    Found 10-bit comparator greater for signal <zeroPulse[9]_pulseCntr[9]_LessThan_21_o> created at line 153
-    Found 10-bit comparator lessequal for signal <n0049> created at line 190
-    Found 10-bit comparator lessequal for signal <n0052> created at line 197
+    Found 5-bit subtractor for signal <dataCntr[4]_GND_4_o_sub_14_OUT> created at line 151.
+    Found 10-bit adder for signal <pulseCntr[9]_GND_4_o_add_35_OUT> created at line 199.
+    Found 1-bit 24-to-1 multiplexer for signal <GND_4_o_X_4_o_Mux_15_o> created at line 153.
+    Found 1-bit 3-to-1 multiplexer for signal <neostate[1]_GND_4_o_MUX_101_o> created at line 146.
+    Found 1-bit 3-to-1 multiplexer for signal <GND_4_o_tx_compSig_MUX_100_o> created at line 146.
+    Found 10-bit 3-to-1 multiplexer for signal <GND_4_o_pulseCntr[9]_mux_38_OUT> created at line 196.
+    Found 10-bit comparator lessequal for signal <n0011> created at line 136
+    Found 10-bit comparator equal for signal <pulseCntr[9]_fullPulse[9]_equal_13_o> created at line 150
+    Found 10-bit comparator greater for signal <onePulse[9]_pulseCntr[9]_LessThan_17_o> created at line 153
+    Found 10-bit comparator greater for signal <pulseCntr[9]_fullPulse[9]_LessThan_18_o> created at line 153
+    Found 10-bit comparator greater for signal <zeroPulse[9]_pulseCntr[9]_LessThan_21_o> created at line 154
+    Found 10-bit comparator lessequal for signal <n0049> created at line 191
+    Found 10-bit comparator lessequal for signal <n0052> created at line 198
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  17 D-type flip-flop(s).
@@ -730,7 +730,7 @@ wr_en_i          |    7.113|         |         |         |
 
 
 Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 13.45 secs
+Total CPU time to Xst completion: 13.31 secs
  
 --> 
 

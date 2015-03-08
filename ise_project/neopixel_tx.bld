@@ -5,7 +5,7 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 neopixel_tx.ngc
 neopixel_tx.ngd
 
-Reading NGO file "C:/fpga_projects/neopixel_tx/neopixel_tx.ngc" ...
+Reading NGO file "C:/fpga_projects/neo_tx/ise_project/neopixel_tx.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -29,7 +29,7 @@ NGDBUILD Design Results Summary:
 Total memory usage is 159128 kilobytes
 
 Writing NGD file "neopixel_tx.ngd" ...
-Total REAL time to NGDBUILD completion:  5 sec
+Total REAL time to NGDBUILD completion:  4 sec
 Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "neopixel_tx.bld"...

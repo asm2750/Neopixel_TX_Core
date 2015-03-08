@@ -78,7 +78,7 @@ module FIFO_WxD #(
 
 	// assign the outputs continously (pointers determine flags and data)
 	assign empty_flg = (wr_ptr == rd_ptr)? 1'b1 : 1'b0; 
-	assign full_flg = (wr_ptr + 1 == rd_ptr)? 1'b1 : 1'b0; // because of the full flg decision the fifo depth is 2^n - 1
+	assign full_flg = ((wr_ptr + {{U_FIFO_SQ_DEPTH-1{1'b0}}, 1'b1}) == rd_ptr)? 1'b1 : 1'b0; // because of the full flg decision the fifo depth is 2^n - 1
 	assign dataOut = (empty_flg)? {U_FIFO_WIDTH{1'b0}} : fifo[rd_ptr]; // 0 if empty
 	
 endmodule

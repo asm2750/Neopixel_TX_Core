@@ -38,13 +38,13 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">neo_rgbFIFO/Mram_fifo1_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">neo_rgbFIFO/Mram_fifo4_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
 <msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">neo_rgbFIFO/Mram_fifo2_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">neo_rgbFIFO/Mram_fifo3_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">neo_rgbFIFO/Mram_fifo4_RAMD_D1_O</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
 <msg type="info" file="PhysDesignRules" num="1861" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">clk20MHz/dcm_sp_inst</arg>, consult the device Data Sheet.

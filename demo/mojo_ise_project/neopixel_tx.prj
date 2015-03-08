@@ -1,3 +1,5 @@
+verilog work "ipcore_dir/clk_wiz_v3_6.v"
+verilog work "ipcore_dir/mojo_mb.v"
 verilog work "neopixel_tx_fsm.v"
 verilog work "FIFO_WxD.v"
 verilog work "neopixel_tx.v"

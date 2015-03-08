@@ -246,9 +246,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1421379221" xil_pn:in_ck="-8705635102915064290" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4804740314902787358" xil_pn:start_ts="1421379205">
+    <transform xil_pn:end_ts="1425764667" xil_pn:in_ck="-8705635102915064290" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4804740314902787358" xil_pn:start_ts="1425764647">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="FIFO_WxD.ngr"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="neopixel_tx.lso"/>
@@ -271,8 +274,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1421379261" xil_pn:in_ck="1745980790082297724" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="9112101088239880976" xil_pn:start_ts="1421379251">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1425764726" xil_pn:in_ck="1745980790082297724" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="9112101088239880976" xil_pn:start_ts="1425764718">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
@@ -280,14 +284,9 @@
       <outfile xil_pn:name="neopixel_tx.ngd"/>
       <outfile xil_pn:name="neopixel_tx_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1421118789" xil_pn:in_ck="1931386683300290823" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1448924893915930207" xil_pn:start_ts="1421118752">
+    <transform xil_pn:end_ts="1425764761" xil_pn:in_ck="1931386683300290823" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1448924893915930207" xil_pn:start_ts="1425764726">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="neopixel_tx.pcf"/>
       <outfile xil_pn:name="neopixel_tx_map.map"/>
@@ -298,13 +297,10 @@
       <outfile xil_pn:name="neopixel_tx_summary.xml"/>
       <outfile xil_pn:name="neopixel_tx_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1421118814" xil_pn:in_ck="7312216463589857458" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1421118789">
+    <transform xil_pn:end_ts="1425764784" xil_pn:in_ck="7312216463589857458" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1425764761">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="neopixel_tx.ncd"/>
       <outfile xil_pn:name="neopixel_tx.pad"/>
@@ -320,8 +316,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="neopixel_tx.bgn"/>
@@ -333,12 +330,9 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1421118814" xil_pn:in_ck="-8869597493664936581" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1421118806">
+    <transform xil_pn:end_ts="1425764784" xil_pn:in_ck="-8869597493664936581" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1425764777">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="neopixel_tx.twr"/>
       <outfile xil_pn:name="neopixel_tx.twx"/>

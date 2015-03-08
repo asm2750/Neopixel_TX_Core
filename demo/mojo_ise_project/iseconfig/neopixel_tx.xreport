@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-01-15T17:34:02</DateModified>
+  <DateModified>2015-03-07T14:41:03</DateModified>
   <ModuleName>neopixel_tx</ModuleName>
-  <SummaryTimeStamp>2015-01-11T00:12:43</SummaryTimeStamp>
-  <SavedFilePath>C:/Xilinx/neopixel_tx/iseconfig/neopixel_tx.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Xilinx/neopixel_tx\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2015-03-07T13:46:25</SummaryTimeStamp>
+  <SavedFilePath>C:/fpga_projects/neo_tx/demo/mojo_ise_project/iseconfig/neopixel_tx.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/fpga_projects/neo_tx/demo/mojo_ise_project\</ImplementationReportsDirectory>
   <DateInitialized>2015-01-05T20:20:48</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

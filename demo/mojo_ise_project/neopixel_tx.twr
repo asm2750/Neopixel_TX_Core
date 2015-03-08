@@ -37,7 +37,7 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-sys_rst     |    2.235(R)|      SLOW  |   -0.634(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+sys_rst     |    1.712(R)|      SLOW  |   -0.412(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -45,12 +45,12 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-ctrlLed<0>  |        11.742(R)|      SLOW  |         5.462(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
-ctrlLed<1>  |        11.888(R)|      SLOW  |         5.527(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
-ctrlLed<2>  |        11.712(R)|      SLOW  |         5.470(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
-ctrlLed<3>  |        11.874(R)|      SLOW  |         5.579(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
-ctrlLed<4>  |        11.785(R)|      SLOW  |         5.532(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
-neo_tx_out  |         9.992(R)|      SLOW  |         4.775(R)|      FAST  |neoClk            |   0.000|
+ctrlLed<0>  |        10.598(R)|      SLOW  |         4.721(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+ctrlLed<1>  |        11.051(R)|      SLOW  |         4.972(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+ctrlLed<2>  |        10.369(R)|      SLOW  |         4.600(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+ctrlLed<3>  |        10.655(R)|      SLOW  |         4.771(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+ctrlLed<4>  |        10.312(R)|      SLOW  |         4.570(R)|      FAST  |clk_IBUFG_BUFG    |   0.000|
+neo_tx_out  |         9.703(R)|      SLOW  |         4.219(R)|      FAST  |neoClk            |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -58,18 +58,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    8.531|         |         |         |
+clk            |    8.122|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Jan 12 19:13:33 2015 
+Analysis completed Sat Mar 07 13:46:23 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 222 MB
+Peak Memory Usage: 223 MB
 
 
 

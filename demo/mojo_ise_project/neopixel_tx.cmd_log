@@ -105,3 +105,8 @@ xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/neopixel_tx.xst" -ofn "C:/Xilinx/n
 xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/neopixel_tx.xst" -ofn "C:/Xilinx/neopixel_tx/neopixel_tx.syr" 
 xst -intstyle ise -ifn "C:/Xilinx/neopixel_tx/neopixel_tx.xst" -ofn "C:/Xilinx/neopixel_tx/neopixel_tx.syr" 
 ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mojo_constr.ucf -p xc6slx9-tqg144-2 neopixel_tx.ngc neopixel_tx.ngd -bm "ipcore_dir/mojo_mb.bmm" 
+xst -intstyle ise -ifn "C:/fpga_projects/neo_tx/demo/mojo_ise_project/neopixel_tx.xst" -ofn "C:/fpga_projects/neo_tx/demo/mojo_ise_project/neopixel_tx.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mojo_constr.ucf -p xc6slx9-tqg144-2 neopixel_tx.ngc neopixel_tx.ngd -bm "ipcore_dir/mojo_mb.bmm" 
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o neopixel_tx_map.ncd neopixel_tx.ngd neopixel_tx.pcf 
+par -w -intstyle ise -ol high -mt off neopixel_tx_map.ncd neopixel_tx.ncd neopixel_tx.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml neopixel_tx.twx neopixel_tx.ncd -o neopixel_tx.twr neopixel_tx.pcf -ucf mojo_constr.ucf 

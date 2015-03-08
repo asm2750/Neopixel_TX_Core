@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.33 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.33 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: neopixel_tx.prj
 
@@ -108,11 +108,15 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Xilinx\neopixel_tx\neopixel_tx_fsm.v" into library work
+Analyzing Verilog file "C:\fpga_projects\neo_tx\demo\mojo_ise_project\ipcore_dir\clk_wiz_v3_6.v" into library work
+Parsing module <clk_wiz_v3_6>.
+Analyzing Verilog file "C:\fpga_projects\neo_tx\demo\mojo_ise_project\ipcore_dir\mojo_mb.v" into library work
+Parsing module <mojo_mb>.
+Analyzing Verilog file "C:\fpga_projects\neo_tx\demo\mojo_ise_project\neopixel_tx_fsm.v" into library work
 Parsing module <neopixel_tx_fsm>.
-Analyzing Verilog file "C:\Xilinx\neopixel_tx\FIFO_WxD.v" into library work
+Analyzing Verilog file "C:\fpga_projects\neo_tx\demo\mojo_ise_project\FIFO_WxD.v" into library work
 Parsing module <FIFO_WxD>.
-Analyzing Verilog file "C:\Xilinx\neopixel_tx\neopixel_tx.v" into library work
+Analyzing Verilog file "C:\fpga_projects\neo_tx\demo\mojo_ise_project\neopixel_tx.v" into library work
 Parsing module <neopixel_tx>.
 
 =========================================================================
@@ -120,6 +124,17 @@ Parsing module <neopixel_tx>.
 =========================================================================
 
 Elaborating module <neopixel_tx>.
+
+Elaborating module <mojo_mb>.
+WARNING:HDLCompiler:1127 - "C:\fpga_projects\neo_tx\demo\mojo_ise_project\neopixel_tx.v" Line 60: Assignment to gpi_int ignored, since the identifier is never used
+
+Elaborating module <clk_wiz_v3_6>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.5,CLKFX_DIVIDE=5,CLKFX_MULTIPLY=2,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "C:\fpga_projects\neo_tx\demo\mojo_ise_project\ipcore_dir\clk_wiz_v3_6.v" Line 124: Assignment to locked_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\fpga_projects\neo_tx\demo\mojo_ise_project\ipcore_dir\clk_wiz_v3_6.v" Line 125: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
 
 Elaborating module <FIFO_WxD(U_FIFO_WIDTH=24,U_FIFO_SQ_DEPTH=10)>.
 
@@ -132,22 +147,29 @@ Elaborating module <neopixel_tx_fsm>.
 =========================================================================
 
 Synthesizing Unit <neopixel_tx>.
-    Related source file is "C:\Xilinx\neopixel_tx\neopixel_tx.v".
+    Related source file is "C:\fpga_projects\neo_tx\demo\mojo_ise_project\neopixel_tx.v".
+INFO:Xst:3210 - "C:\fpga_projects\neo_tx\demo\mojo_ise_project\neopixel_tx.v" line 57: Output port <GPI1_Interrupt> of the instance <mojo_mb> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <neopixel_tx> synthesized.
 
+Synthesizing Unit <clk_wiz_v3_6>.
+    Related source file is "C:\fpga_projects\neo_tx\demo\mojo_ise_project\ipcore_dir\clk_wiz_v3_6.v".
+    Summary:
+	no macro.
+Unit <clk_wiz_v3_6> synthesized.
+
 Synthesizing Unit <FIFO_WxD_1>.
-    Related source file is "C:\Xilinx\neopixel_tx\FIFO_WxD.v".
+    Related source file is "C:\fpga_projects\neo_tx\demo\mojo_ise_project\FIFO_WxD.v".
         U_FIFO_WIDTH = 24
         U_FIFO_SQ_DEPTH = 10
     Found 8x24-bit dual-port RAM <Mram_fifo> for signal <fifo>.
     Found 10-bit register for signal <rd_ptr>.
     Found 10-bit register for signal <wr_ptr>.
-    Found 10-bit adder for signal <rd_ptr[9]_GND_2_o_add_4_OUT> created at line 62.
-    Found 11-bit adder for signal <_n0034> created at line 68.
-    Found 10-bit comparator equal for signal <empty_flg> created at line 67
-    Found 11-bit comparator equal for signal <full_flg> created at line 30
+    Found 10-bit adder for signal <rd_ptr[9]_GND_6_o_add_4_OUT> created at line 75.
+    Found 11-bit adder for signal <_n0034> created at line 81.
+    Found 10-bit comparator equal for signal <empty_flg> created at line 80
+    Found 11-bit comparator equal for signal <full_flg> created at line 43
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -157,16 +179,16 @@ Synthesizing Unit <FIFO_WxD_1>.
 Unit <FIFO_WxD_1> synthesized.
 
 Synthesizing Unit <FIFO_WxD_2>.
-    Related source file is "C:\Xilinx\neopixel_tx\FIFO_WxD.v".
+    Related source file is "C:\fpga_projects\neo_tx\demo\mojo_ise_project\FIFO_WxD.v".
         U_FIFO_WIDTH = 1
         U_FIFO_SQ_DEPTH = 10
     Found 8x1-bit dual-port RAM <Mram_fifo> for signal <fifo>.
     Found 10-bit register for signal <rd_ptr>.
     Found 10-bit register for signal <wr_ptr>.
-    Found 10-bit adder for signal <rd_ptr[9]_GND_3_o_add_4_OUT> created at line 62.
-    Found 11-bit adder for signal <_n0033> created at line 68.
-    Found 10-bit comparator equal for signal <empty_flg> created at line 67
-    Found 11-bit comparator equal for signal <full_flg> created at line 30
+    Found 10-bit adder for signal <rd_ptr[9]_GND_7_o_add_4_OUT> created at line 75.
+    Found 11-bit adder for signal <_n0033> created at line 81.
+    Found 10-bit comparator equal for signal <empty_flg> created at line 80
+    Found 11-bit comparator equal for signal <full_flg> created at line 43
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -176,7 +198,7 @@ Synthesizing Unit <FIFO_WxD_2>.
 Unit <FIFO_WxD_2> synthesized.
 
 Synthesizing Unit <neopixel_tx_fsm>.
-    Related source file is "C:\Xilinx\neopixel_tx\neopixel_tx_fsm.v".
+    Related source file is "C:\fpga_projects\neo_tx\demo\mojo_ise_project\neopixel_tx_fsm.v".
         idle = 2'b00
         chk_fifo = 2'b01
         neo_sendRst = 2'b10
@@ -206,19 +228,19 @@ Synthesizing Unit <neopixel_tx_fsm>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 5-bit subtractor for signal <dataCntr[4]_GND_4_o_sub_14_OUT> created at line 150.
-    Found 10-bit adder for signal <pulseCntr[9]_GND_4_o_add_35_OUT> created at line 198.
-    Found 1-bit 24-to-1 multiplexer for signal <GND_4_o_X_4_o_Mux_15_o> created at line 152.
-    Found 1-bit 3-to-1 multiplexer for signal <neostate[1]_GND_4_o_MUX_101_o> created at line 145.
-    Found 1-bit 3-to-1 multiplexer for signal <GND_4_o_tx_compSig_MUX_100_o> created at line 145.
-    Found 10-bit 3-to-1 multiplexer for signal <GND_4_o_pulseCntr[9]_mux_38_OUT> created at line 195.
-    Found 10-bit comparator lessequal for signal <n0011> created at line 135
-    Found 10-bit comparator equal for signal <pulseCntr[9]_fullPulse[9]_equal_13_o> created at line 149
-    Found 10-bit comparator greater for signal <onePulse[9]_pulseCntr[9]_LessThan_17_o> created at line 152
-    Found 10-bit comparator greater for signal <pulseCntr[9]_fullPulse[9]_LessThan_18_o> created at line 152
-    Found 10-bit comparator greater for signal <zeroPulse[9]_pulseCntr[9]_LessThan_21_o> created at line 153
-    Found 10-bit comparator lessequal for signal <n0049> created at line 190
-    Found 10-bit comparator lessequal for signal <n0052> created at line 197
+    Found 5-bit subtractor for signal <dataCntr[4]_GND_8_o_sub_14_OUT> created at line 151.
+    Found 10-bit adder for signal <pulseCntr[9]_GND_8_o_add_35_OUT> created at line 199.
+    Found 1-bit 24-to-1 multiplexer for signal <GND_8_o_X_8_o_Mux_15_o> created at line 153.
+    Found 1-bit 3-to-1 multiplexer for signal <neostate[1]_GND_8_o_MUX_101_o> created at line 146.
+    Found 1-bit 3-to-1 multiplexer for signal <GND_8_o_tx_compSig_MUX_100_o> created at line 146.
+    Found 10-bit 3-to-1 multiplexer for signal <GND_8_o_pulseCntr[9]_mux_38_OUT> created at line 196.
+    Found 10-bit comparator lessequal for signal <n0011> created at line 136
+    Found 10-bit comparator equal for signal <pulseCntr[9]_fullPulse[9]_equal_13_o> created at line 150
+    Found 10-bit comparator greater for signal <onePulse[9]_pulseCntr[9]_LessThan_17_o> created at line 153
+    Found 10-bit comparator greater for signal <pulseCntr[9]_fullPulse[9]_LessThan_18_o> created at line 153
+    Found 10-bit comparator greater for signal <zeroPulse[9]_pulseCntr[9]_LessThan_21_o> created at line 154
+    Found 10-bit comparator lessequal for signal <n0049> created at line 191
+    Found 10-bit comparator lessequal for signal <n0052> created at line 198
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  17 D-type flip-flop(s).
@@ -263,6 +285,8 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Reading core <ipcore_dir/mojo_mb.ngc>.
+Loading core <mojo_mb> for timing and area information for instance <mojo_mb>.
 
 Synthesizing (advanced) Unit <FIFO_WxD_1>.
 The following registers are absorbed into counter <rd_ptr>: 1 register on signal <rd_ptr>.
@@ -360,10 +384,16 @@ Optimizing unit <FIFO_WxD_2> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block neopixel_tx, actual ratio is 3.
-FlipFlop neo_rgbFIFO/wr_ptr_0 has been replicated 1 time(s)
-FlipFlop neo_rgbFIFO/wr_ptr_1 has been replicated 1 time(s)
-FlipFlop neo_rgbFIFO/wr_ptr_8 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block neopixel_tx, actual ratio is 11.
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mojo_mb> is equivalent to the following 31 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mojo_mb> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mojo_mb> is equivalent to the following 31 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mojo_mb> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+WARNING:Xst:2957 - There are clock and non-clock loads on clock signal mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3>_BUFG. This is not a recommended design practice, that may cause excessive delay, skew or unroutable situations.
 
 Final Macro Processing ...
 
@@ -371,8 +401,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 62
- Flip-Flops                                            : 62
+# Registers                                            : 59
+ Flip-Flops                                            : 59
 
 =========================================================================
 
@@ -395,33 +425,47 @@ Top Level Output File Name         : neopixel_tx.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 268
-#      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 18
-#      LUT2                        : 28
-#      LUT3                        : 15
-#      LUT4                        : 22
-#      LUT5                        : 27
-#      LUT6                        : 110
+# BELS                             : 889
+#      GND                         : 2
+#      INV                         : 11
+#      LUT1                        : 21
+#      LUT2                        : 63
+#      LUT3                        : 53
+#      LUT4                        : 196
+#      LUT5                        : 64
+#      LUT6                        : 159
+#      LUT6_2                      : 90
+#      MULT_AND                    : 3
 #      MUXCY                       : 18
-#      MUXF7                       : 5
-#      VCC                         : 1
-#      XORCY                       : 20
-# FlipFlops/Latches                : 62
-#      FD                          : 12
-#      FDC                         : 25
-#      FDCE                        : 20
-#      FDE                         : 5
-# RAMS                             : 5
+#      MUXCY_L                     : 72
+#      MUXF5                       : 64
+#      MUXF7                       : 4
+#      VCC                         : 2
+#      XORCY                       : 67
+# FlipFlops/Latches                : 410
+#      FD                          : 102
+#      FDC                         : 14
+#      FDCE                        : 28
+#      FDE                         : 77
+#      FDR                         : 49
+#      FDRE                        : 121
+#      FDS                         : 6
+#      FDSE                        : 13
+# RAMS                             : 77
 #      RAM16X1D                    : 1
 #      RAM32M                      : 4
-# Clock Buffers                    : 3
-#      BUFG                        : 1
-#      BUFGP                       : 2
-# IO Buffers                       : 31
-#      IBUF                        : 28
-#      OBUF                        : 3
+#      RAM32X1D                    : 64
+#      RAMB16BWER                  : 8
+# Shift Registers                  : 44
+#      SRL16E                      : 44
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 8
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 6
+# DCMs                             : 1
+#      DCM_SP                      : 1
 
 Device utilization summary:
 ---------------------------
@@ -430,25 +474,28 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              62  out of  11440     0%  
- Number of Slice LUTs:                  241  out of   5720     4%  
-    Number used as Logic:               223  out of   5720     3%  
-    Number used as Memory:               18  out of   1440     1%  
-       Number used as RAM:               18
+ Number of Slice Registers:             410  out of  11440     3%  
+ Number of Slice LUTs:                  847  out of   5720    14%  
+    Number used as Logic:               657  out of   5720    11%  
+    Number used as Memory:              190  out of   1440    13%  
+       Number used as RAM:              146
+       Number used as SRL:               44
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    244
-   Number with an unused Flip Flop:     182  out of    244    74%  
-   Number with an unused LUT:             3  out of    244     1%  
-   Number of fully used LUT-FF pairs:    59  out of    244    24%  
-   Number of unique control sets:         6
+ Number of LUT Flip Flop pairs used:   1007
+   Number with an unused Flip Flop:     597  out of   1007    59%  
+   Number with an unused LUT:           160  out of   1007    15%  
+   Number of fully used LUT-FF pairs:   250  out of   1007    24%  
+   Number of unique control sets:        30
 
 IO Utilization: 
- Number of IOs:                          33
- Number of bonded IOBs:                  33  out of    102    32%  
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    102     7%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of Block RAM/FIFO:                8  out of     32    25%  
+    Number using Block RAM only:          8
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
 
 ---------------------------
 Partition Resource Summary:
@@ -468,13 +515,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-neo_tx/tx_compSig                  | BUFG                   | 20    |
-wr_en_i                            | BUFGP                  | 28    |
-clk_20MHz_i                        | BUFGP                  | 19    |
------------------------------------+------------------------+-------+
+---------------------------------------------------------+------------------------+-------+
+Clock Signal                                             | Clock buffer(FF name)  | Load  |
+---------------------------------------------------------+------------------------+-------+
+neo_tx/tx_compSig                                        | BUFG                   | 20    |
+mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3>| BUFG                   | 25    |
+clk                                                      | DCM_SP:CLKFX           | 19    |
+clk                                                      | IBUFG+BUFG             | 467   |
+---------------------------------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -484,9 +532,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 7.113ns (Maximum Frequency: 140.588MHz)
-   Minimum input arrival time before clock: 5.963ns
-   Maximum output required time after clock: 10.897ns
+   Minimum period: 8.072ns (Maximum Frequency: 123.887MHz)
+   Minimum input arrival time before clock: 3.019ns
+   Maximum output required time after clock: 4.312ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -495,251 +543,167 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'neo_tx/tx_compSig'
-  Clock period: 5.543ns (frequency: 180.408MHz)
+  Clock period: 6.071ns (frequency: 164.718MHz)
   Total number of paths / destination ports: 310 / 40
 -------------------------------------------------------------------------
-Delay:               5.543ns (Levels of Logic = 3)
-  Source:            neo_rgbFIFO/rd_ptr_2 (FF)
+Delay:               6.071ns (Levels of Logic = 3)
+  Source:            neo_rgbFIFO/rd_ptr_0 (FF)
   Destination:       neo_rgbFIFO/rd_ptr_9 (FF)
   Source Clock:      neo_tx/tx_compSig rising
   Destination Clock: neo_tx/tx_compSig rising
 
-  Data Path: neo_rgbFIFO/rd_ptr_2 to neo_rgbFIFO/rd_ptr_9
+  Data Path: neo_rgbFIFO/rd_ptr_0 to neo_rgbFIFO/rd_ptr_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            16   0.525   1.410  neo_rgbFIFO/rd_ptr_2 (neo_rgbFIFO/rd_ptr_2)
-     LUT4:I1->O            2   0.235   0.834  neo_rgbFIFO/full_flg1111 (neo_rgbFIFO/full_flg111)
-     LUT6:I4->O            2   0.250   0.726  neo_rgbFIFO/empty_flg103_SW0 (N136)
+     FDCE:C->Q            16   0.525   1.612  neo_rgbFIFO/rd_ptr_0 (neo_rgbFIFO/rd_ptr_0)
+     LUT6:I1->O            1   0.254   1.137  neo_rgbFIFO/empty_flg101 (neo_rgbFIFO/empty_flg101)
+     LUT6:I0->O            2   0.254   0.726  neo_rgbFIFO/empty_flg103_SW0 (N87)
      LUT6:I5->O           10   0.254   1.007  neo_rgbFIFO/empty_flg_inv1 (neo_rgbFIFO/empty_flg_inv)
      FDCE:CE                   0.302          neo_rgbFIFO/rd_ptr_0
     ----------------------------------------
-    Total                      5.543ns (1.566ns logic, 3.977ns route)
+    Total                      6.071ns (1.589ns logic, 4.482ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3>'
+  Clock period: 7.576ns (frequency: 131.996MHz)
+  Total number of paths / destination ports: 1715 / 48
+-------------------------------------------------------------------------
+Delay:               7.576ns (Levels of Logic = 5)
+  Source:            neo_rgbFIFO/wr_ptr_4 (FF)
+  Destination:       neo_rgbFIFO/Mram_fifo4 (RAM)
+  Source Clock:      mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3> rising
+  Destination Clock: mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3> rising
+
+  Data Path: neo_rgbFIFO/wr_ptr_4 to neo_rgbFIFO/Mram_fifo4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.525   1.340  neo_rgbFIFO/wr_ptr_4 (neo_rgbFIFO/wr_ptr_4)
+     LUT6:I1->O            4   0.254   0.804  neo_rgbFIFO/Madd__n0034_xor<6>111 (neo_rgbFIFO/Madd__n0034_xor<6>11)
+     LUT3:I2->O            2   0.254   0.954  neo_rgbFIFO/Madd__n0034_xor<7>11 (neo_rgbFIFO/_n0034<3>)
+     LUT6:I3->O            4   0.235   0.804  neo_rgbFIFO/full_flg112 (neo_rgbFIFO/full_flg112)
+     LUT6:I5->O            2   0.254   0.726  neo_rgbFIFO/full_flg114 (rgb_full_flg)
+     LUT2:I1->O            4   0.254   0.803  neo_rgbFIFO/Mmux_BUS_000111 (neo_rgbFIFO/BUS_0001)
+     RAM32M:WE                 0.369          neo_rgbFIFO/Mram_fifo2
+    ----------------------------------------
+    Total                      7.576ns (2.145ns logic, 5.431ns route)
                                        (28.3% logic, 71.7% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'wr_en_i'
-  Clock period: 7.113ns (frequency: 140.588MHz)
-  Total number of paths / destination ports: 2688 / 43
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.072ns (frequency: 123.887MHz)
+  Total number of paths / destination ports: 88806 / 1992
 -------------------------------------------------------------------------
-Delay:               7.113ns (Levels of Logic = 4)
-  Source:            neo_rgbFIFO/wr_ptr_2 (FF)
-  Destination:       neo_rgbFIFO/Mram_fifo4 (RAM)
-  Source Clock:      wr_en_i rising
-  Destination Clock: wr_en_i rising
+Delay:               8.072ns (Levels of Logic = 5)
+  Source:            mojo_mb/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
+  Destination:       mojo_mb/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op2_DFF (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
 
-  Data Path: neo_rgbFIFO/wr_ptr_2 to neo_rgbFIFO/Mram_fifo4
+  Data Path: mojo_mb/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I to mojo_mb/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Op2_DFF
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             17   0.525   1.437  neo_rgbFIFO/wr_ptr_2 (neo_rgbFIFO/wr_ptr_2)
-     LUT6:I3->O           12   0.235   1.069  neo_rgbFIFO/Madd__n0034_xor<6>111 (neo_rgbFIFO/Madd__n0034_xor<6>11)
-     LUT3:I2->O           14   0.254   1.127  neo_rgbFIFO/full_flg811 (neo_rgbFIFO/full_flg81)
-     LUT5:I4->O            1   0.254   0.790  neo_rgbFIFO/full_flg114_SW0_SW2 (N56)
-     LUT6:I4->O            4   0.250   0.803  neo_rgbFIFO/Mmux_BUS_000111 (neo_rgbFIFO/BUS_0001)
-     RAM32M:WE                 0.369          neo_rgbFIFO/Mram_fifo2
+     FDS:C->Q             47   0.525   1.770  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (U0/microblaze_I/MicroBlaze_Core_I/Area.buffer_Addr<1>)
+     SRL16E:A2->Q         21   0.254   1.418  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[1].SRL16E_I/Use_unisim.MB_SRL16E_I1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<1>)
+     LUT3:I1->O           16   0.250   1.182  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PWR_12_o_instr_OF[0]_equal_114_o<0>11 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PWR_12_o_instr_OF[0]_equal_114_o<0>1)
+     LUT5:I4->O            1   0.254   0.682  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PWR_12_o_take_Intr_Now_Early_AND_179_o1_1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PWR_12_o_take_Intr_Now_Early_AND_179_o1)
+     LUT3:I2->O           15   0.254   1.155  U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[10].Operand_Select_Bit_I/Mmux_op2_I111 (U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[10].Operand_Select_Bit_I/Mmux_op2_I11)
+     LUT6:I5->O            1   0.254   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[9].Operand_Select_Bit_I/Mmux_op2_I1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[9].Operand_Select_Bit_I/op2_I)
+     FDE:D                     0.074          U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[9].Operand_Select_Bit_I/Op2_DFF
     ----------------------------------------
-    Total                      7.113ns (1.887ns logic, 5.226ns route)
-                                       (26.5% logic, 73.5% route)
+    Total                      8.072ns (1.865ns logic, 6.207ns route)
+                                       (23.1% logic, 76.9% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk_20MHz_i'
-  Clock period: 5.572ns (frequency: 179.469MHz)
-  Total number of paths / destination ports: 590 / 24
--------------------------------------------------------------------------
-Delay:               5.572ns (Levels of Logic = 4)
-  Source:            neo_tx/pulseCntr_2 (FF)
-  Destination:       neo_tx/neo_dOut (FF)
-  Source Clock:      clk_20MHz_i rising
-  Destination Clock: clk_20MHz_i rising
-
-  Data Path: neo_tx/pulseCntr_2 to neo_tx/neo_dOut
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q              12   0.525   1.345  neo_tx/pulseCntr_2 (neo_tx/pulseCntr_2)
-     LUT4:I0->O            1   0.254   0.910  neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o13 (neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o12)
-     LUT6:I3->O            2   0.235   0.834  neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o14 (neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o13)
-     LUT6:I4->O            1   0.250   0.910  neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o18_SW0 (N121)
-     LUT6:I3->O            1   0.235   0.000  neo_tx/Mmux_neostate[1]_GND_4_o_MUX_101_o18 (neo_tx/neostate[1]_GND_4_o_MUX_101_o)
-     FD:D                      0.074          neo_tx/neo_dOut
-    ----------------------------------------
-    Total                      5.572ns (1.573ns logic, 3.999ns route)
-                                       (28.2% logic, 71.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'neo_tx/tx_compSig'
-  Total number of paths / destination ports: 20 / 20
--------------------------------------------------------------------------
-Offset:              4.543ns (Levels of Logic = 2)
-  Source:            neo_rst_i (PAD)
-  Destination:       neo_rgbFIFO/rd_ptr_9 (FF)
-  Destination Clock: neo_tx/tx_compSig rising
-
-  Data Path: neo_rst_i to neo_rgbFIFO/rd_ptr_9
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             3   1.328   0.765  neo_rst_i_IBUF (neo_rst_i_IBUF)
-     INV:I->O             45   0.255   1.736  neo_rgbFIFO/rst_inv1_INV_0 (neo_cmdFIFO/rst_inv)
-     FDCE:CLR                  0.459          neo_cmdFIFO/rd_ptr_0
-    ----------------------------------------
-    Total                      4.543ns (2.042ns logic, 2.501ns route)
-                                       (44.9% logic, 55.1% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'wr_en_i'
-  Total number of paths / destination ports: 53 / 53
--------------------------------------------------------------------------
-Offset:              4.543ns (Levels of Logic = 2)
-  Source:            neo_rst_i (PAD)
-  Destination:       neo_rgbFIFO/wr_ptr_9 (FF)
-  Destination Clock: wr_en_i rising
-
-  Data Path: neo_rst_i to neo_rgbFIFO/wr_ptr_9
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             3   1.328   0.765  neo_rst_i_IBUF (neo_rst_i_IBUF)
-     INV:I->O             45   0.255   1.736  neo_rgbFIFO/rst_inv1_INV_0 (neo_cmdFIFO/rst_inv)
-     FDC:CLR                   0.459          neo_rgbFIFO/wr_ptr_9
-    ----------------------------------------
-    Total                      4.543ns (2.042ns logic, 2.501ns route)
-                                       (44.9% logic, 55.1% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_20MHz_i'
-  Total number of paths / destination ports: 40 / 20
--------------------------------------------------------------------------
-Offset:              5.963ns (Levels of Logic = 5)
-  Source:            neo_mode_i (PAD)
-  Destination:       neo_tx/pulseCntr_9 (FF)
-  Destination Clock: clk_20MHz_i rising
-
-  Data Path: neo_mode_i to neo_tx/pulseCntr_9
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             5   1.328   1.117  neo_mode_i_IBUF (neo_mode_i_IBUF)
-     LUT4:I0->O            2   0.254   0.726  neo_tx/pulseCntr[9]_fullPulse[9]_equal_13_o10121 (neo_tx/pulseCntr[9]_fullPulse[9]_equal_13_o1012)
-     LUT5:I4->O            2   0.254   0.726  neo_tx/Mmux_GND_4_o_pulseCntr[9]_mux_38_OUT11_SW0 (N22)
-     LUT4:I3->O            9   0.254   0.976  neo_tx/Mmux_GND_4_o_pulseCntr[9]_mux_38_OUT11 (neo_tx/Mmux_GND_4_o_pulseCntr[9]_mux_38_OUT11)
-     LUT6:I5->O            1   0.254   0.000  neo_tx/Mmux_GND_4_o_pulseCntr[9]_mux_38_OUT21 (neo_tx/GND_4_o_pulseCntr[9]_mux_38_OUT<1>)
-     FD:D                      0.074          neo_tx/pulseCntr_1
-    ----------------------------------------
-    Total                      5.963ns (2.418ns logic, 3.545ns route)
-                                       (40.6% logic, 59.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'neo_tx/tx_compSig'
-  Total number of paths / destination ports: 80 / 2
--------------------------------------------------------------------------
-Offset:              10.897ns (Levels of Logic = 6)
-  Source:            neo_rgbFIFO/rd_ptr_2 (FF)
-  Destination:       fifo_full_flg_o (PAD)
-  Source Clock:      neo_tx/tx_compSig rising
-
-  Data Path: neo_rgbFIFO/rd_ptr_2 to fifo_full_flg_o
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCE:C->Q            16   0.525   1.410  neo_rgbFIFO/rd_ptr_2 (neo_rgbFIFO/rd_ptr_2)
-     LUT3:I0->O            1   0.235   1.137  neo_rgbFIFO/full_flg11243_SW0_SW0 (N44)
-     LUT6:I0->O            2   0.254   1.156  neo_rgbFIFO/full_flg11243 (neo_rgbFIFO/full_flg11243)
-     LUT5:I0->O           11   0.254   1.147  neo_rgbFIFO/full_flg1124 (neo_rgbFIFO/full_flg1124)
-     LUT6:I4->O            1   0.250   0.682  neo_rgbFIFO/full_flg114 (rgb_full_flg)
-     LUT2:I1->O            1   0.254   0.681  fifo_full_flg_o1 (fifo_full_flg_o_OBUF)
-     OBUF:I->O                 2.912          fifo_full_flg_o_OBUF (fifo_full_flg_o)
-    ----------------------------------------
-    Total                     10.897ns (4.684ns logic, 6.213ns route)
-                                       (43.0% logic, 57.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'wr_en_i'
-  Total number of paths / destination ports: 128 / 2
--------------------------------------------------------------------------
-Offset:              10.250ns (Levels of Logic = 5)
-  Source:            neo_cmdFIFO/wr_ptr_8 (FF)
-  Destination:       fifo_full_flg_o (PAD)
-  Source Clock:      wr_en_i rising
-
-  Data Path: neo_cmdFIFO/wr_ptr_8 to fifo_full_flg_o
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q             28   0.525   1.453  neo_cmdFIFO/wr_ptr_8 (neo_cmdFIFO/wr_ptr_8)
-     LUT6:I5->O            3   0.254   1.042  neo_cmdFIFO/full_flg112_SW1 (N52)
-     LUT5:I1->O           24   0.254   1.835  neo_cmdFIFO/full_flg112 (neo_cmdFIFO/full_flg112)
-     LUT6:I0->O            1   0.254   0.790  neo_cmdFIFO/full_flg114 (cmd_full_flg)
-     LUT2:I0->O            1   0.250   0.681  fifo_full_flg_o1 (fifo_full_flg_o_OBUF)
-     OBUF:I->O                 2.912          fifo_full_flg_o_OBUF (fifo_full_flg_o)
-    ----------------------------------------
-    Total                     10.250ns (4.449ns logic, 5.801ns route)
-                                       (43.4% logic, 56.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_20MHz_i'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.162ns (Levels of Logic = 1)
-  Source:            neo_tx/neo_dOut (FF)
-  Destination:       neopixel_tx_o (PAD)
-  Source Clock:      clk_20MHz_i rising
+Offset:              3.019ns (Levels of Logic = 3)
+  Source:            sys_rst (PAD)
+  Destination:       mojo_mb/U0/filter_reset.reset_vec_0 (FF)
+  Destination Clock: clk rising
 
-  Data Path: neo_tx/neo_dOut to neopixel_tx_o
+  Data Path: sys_rst to mojo_mb/U0/filter_reset.reset_vec_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.525   0.725  neo_tx/neo_dOut (neo_tx/neo_dOut)
-     OBUF:I->O                 2.912          neopixel_tx_o_OBUF (neopixel_tx_o)
+     IBUF:I->O             1   1.328   0.681  sys_rst_IBUF (sys_rst_IBUF)
+     INV:I->O              1   0.255   0.681  sys_rst_INV_1_o1_INV_0 (sys_rst_INV_1_o)
+     begin scope: 'mojo_mb:Reset'
+     FD:D                      0.074          U0/filter_reset.reset_vec_0
     ----------------------------------------
-    Total                      4.162ns (3.437ns logic, 0.725ns route)
-                                       (82.6% logic, 17.4% route)
+    Total                      3.019ns (1.657ns logic, 1.362ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              4.312ns (Levels of Logic = 2)
+  Source:            mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_1 (FF)
+  Destination:       ctrlLed<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_1 to ctrlLed<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.525   0.875  U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_1 (GPO1<1>)
+     end scope: 'mojo_mb:GPO1<1>'
+     OBUF:I->O                 2.912          ctrlLed_1_OBUF (ctrlLed<1>)
+    ----------------------------------------
+    Total                      4.312ns (3.437ns logic, 0.875ns route)
+                                       (79.7% logic, 20.3% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock clk_20MHz_i
------------------+---------+---------+---------+---------+
-                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------+---------+---------+---------+---------+
-clk_20MHz_i      |    5.572|         |         |         |
-neo_tx/tx_compSig|   10.709|         |         |         |
-wr_en_i          |   10.756|         |         |         |
------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock clk
+---------------------------------------------------------+---------+---------+---------+---------+
+                                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------+---------+---------+---------+---------+
+clk                                                      |    8.989|         |         |         |
+mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3>|   12.677|         |         |         |
+neo_tx/tx_compSig                                        |   12.707|         |         |         |
+---------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3>
+---------------------------------------------------------+---------+---------+---------+---------+
+                                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------+---------+---------+---------+---------+
+clk                                                      |    3.728|         |         |         |
+mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3>|    7.576|         |         |         |
+neo_tx/tx_compSig                                        |    8.390|         |         |         |
+---------------------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock neo_tx/tx_compSig
------------------+---------+---------+---------+---------+
-                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------+---------+---------+---------+---------+
-neo_tx/tx_compSig|    5.543|         |         |         |
-wr_en_i          |    5.590|         |         |         |
------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock wr_en_i
------------------+---------+---------+---------+---------+
-                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------+---------+---------+---------+---------+
-neo_tx/tx_compSig|    7.712|         |         |         |
-wr_en_i          |    7.113|         |         |         |
------------------+---------+---------+---------+---------+
+---------------------------------------------------------+---------+---------+---------+---------+
+                                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------+---------+---------+---------+---------+
+clk                                                      |    3.728|         |         |         |
+mojo_mb/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3>|    6.041|         |         |         |
+neo_tx/tx_compSig                                        |    6.071|         |         |         |
+---------------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.53 secs
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.47 secs
  
 --> 
 
-Total memory usage is 239088 kilobytes
+Total memory usage is 242224 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
 
